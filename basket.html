@@ -29,29 +29,26 @@
             </header>
             <main class="main">
                 <div class="main__container">
-                    <section class="goods">
+                    <form class="main__form" action="#" method="post">
+                        <section class="goods">
                         <div class="goods__container">
                             <h1>Корзина</h1>
                             <div class="checkbox-all">
                             <h2 class="visually-hidden">Товары в корзине</h2>
                             <h3 class="visually-hidden">В наличии</h3>
-                            <form>
                                 <label>
                                     <input type="checkbox" name="choose-all">
                                     Выбрать все
                                 </label>
-                            </form>
                             </div>
                             <div class="goods-stock">
                                 <ul class="goods-stock__list">
                                     <li class="goods-stock__item good-card">
                                         <div class="good-card__image">
                                             <div class="good-card__checkbox">
-                                                <form>
                                                     <label>
                                                         <input type="checkbox">
                                                     </label>
-                                                </form>
                                             </div>
                                             <span class="good-card__size">56</span>
                                             <a class="good-card__link" href="#">
@@ -89,11 +86,9 @@
                                     <li class="goods-stock__item good-card">
                                         <div class="good-card__image">
                                             <div class="good-card__checkbox">
-                                                <form>
                                                     <label>
                                                         <input type="checkbox">
                                                     </label>
-                                                </form>
                                             </div>
                                             <span class="good-card__size">56</span>
                                             <a class="good-card__link" href="#">
@@ -130,11 +125,9 @@
                                     <li class="goods-stock__item good-card">
                                         <div class="good-card__image">
                                             <div class="good-card__checkbox">
-                                                <form>
                                                     <label>
                                                         <input type="checkbox">
                                                     </label>
-                                                </form>
                                             </div>
                                             <span class="good-card__size">56</span>
                                             <a class="good-card__link" href="#">
@@ -176,13 +169,6 @@
                                 <ul class="goods-stock__list">
                                     <li class="goods-stock__item good-card">
                                         <div class="good-card__image">
-                                            <div class="good-card__checkbox">
-                                                <form>
-                                                    <label>
-                                                        <input type="checkbox">
-                                                    </label>
-                                                </form>
-                                            </div>
                                             <span class="good-card__size">56</span>
                                             <a class="good-card__link" href="#">
                                                 <img class="good-card__photo" src="img/basket-1.jpg" width="80" height="106" alt="Футболка UZcotton мужская.">
@@ -218,13 +204,6 @@
                                     </li>
                                     <li class="goods-stock__item good-card">
                                         <div class="good-card__image">
-                                            <div class="good-card__checkbox">
-                                                <form>
-                                                    <label>
-                                                        <input type="checkbox">
-                                                    </label>
-                                                </form>
-                                            </div>
                                             <span class="good-card__size">56</span>
                                             <a class="good-card__link" href="#">
                                                 <img class="good-card__photo" src="img/basket-2.jpg" width="80" height="106" alt="Силиконовый чехол картхолдер.">
@@ -259,13 +238,6 @@
                                     </li>
                                     <li class="goods-stock__item good-card">
                                         <div class="good-card__image">
-                                            <div class="good-card__checkbox">
-                                                <form>
-                                                    <label>
-                                                        <input type="checkbox">
-                                                    </label>
-                                                </form>
-                                            </div>
                                             <span class="good-card__size">56</span>
                                             <a class="good-card__link" href="#">
                                                 <img class="good-card__photo" src="img/basket-3.jpg" width="80" height="106" alt="Карандаши цветные Faber-Castell, набор 24 цвета.">
@@ -301,8 +273,8 @@
                                 </ul>
                             </div>
                         </div>
-                    </section>
-                    <section class="delivery">
+                        </section>
+                        <section class="delivery">
                         <h2>Способ доставки</h2>
                         <button class="delivery__button card-button" type="button">Изменить</button>
                         <h3>Пункт выдачи</h3>
@@ -331,10 +303,90 @@
                                 <img class="delivery__product-thumbnail" src="img/basket-2-min.jpg" width="41" height="56" alt="Силиконовый чехол картхолдер.">
                             </div>
                         </div>
-                    </section>
-                    <section class="payment">
-                        
-                    </section>
+                        <p class="delivery__note delivery-info">Обратная доставка товаров на склад при отказе — бесплатно</p>
+                        </section>
+                        <section class="payment">
+                        <h2>Способ оплаты</h2>
+                        <button class="payment__button card-button" type="button">Изменить</button>
+                        <div class="payment__bank-card bank-card">
+                            <img class="bank-card__image" src="img/bank-card.png" width="32" height="24" alt="Логотип карты МИР.">
+                            <span class="bank-card__number">1234 56•• •••• 1234</span>
+                            <span class="bank-card__date">01/30</span>
+                            <p class="bank-card__note">Спишем оплату с карты при получении</p>
+                        </div>
+                        </section>
+                        <section class="receiver">
+                        <h2>Получатель</h2>
+                        <div class="receiver__form from">
+                            <ul class="form__list">
+                                <li class="form__item">
+                                    <label>
+                                        <input class="form__input" type="text" name="name" placeholder="Имя">
+                                    </label>
+                                </li>
+                                <li class="form__item">
+                                    <label>
+                                        <input class="form__input" type="text" name="surname" placeholder="Фамилия">
+                                    </label>
+                                </li>
+                                <li class="form__item">
+                                    <label>
+                                        <input class="form__input" type="email" name="email" placeholder="Электронная почта">
+                                    </label>
+                                </li>
+                                <li class="form__item">
+                                    <label>
+                                        <input class="form__input" type="tel" name="phone" placeholder="Телефон">
+                                    </label>
+                                </li>
+                                <li class="form__item">
+                                    <label>
+                                        <input class="form__input" type="number" name="taxpayer-number" placeholder="ИНН">
+                                    </label>
+                                    <span class="form__item-note">Для таможенного оформления</span>
+                                </li>
+                            </ul>
+                        </div>
+                        </section>
+                        <section class="total">
+                        <h2>Итого</h2>
+                        <span class="total__total price">2 101 063 сом</span>
+                        <table class="total__table">
+                            <tr class="total__table-row">
+                                <td >203 товара</td>
+                                <td>2 302 048 сом</td>
+                            </tr>
+                            <tr>
+                                <td>Скидка</td>
+                                <td>−200 985 сом</td>
+                            </tr>
+                            <tr>
+                                <td>Доставка</td>
+                                <td>Бесплатно</td>
+                            </tr>
+                        </table>
+                        <div class="total__delivery-info delivery-info">
+                            <p>Обратная доставка товаров на склад при отказе — бесплатно</p>
+                        </div>
+                        <div class="total__payment">
+                            <div class="total__payment-checkbox">
+                                <label>
+                                    <input type="checkbox">
+                                    Списать оплату сразу
+                                </label>
+                            </div>
+                            <span class="total__payment-note">Спишем оплату с карты при получении</span>
+                        </div>
+                        </section>
+                        <button type="button">Заказать</button>
+                        <div class="main__form-agreement form-agreement">
+                            <p class="form-agreement__text">Соглашаюсь с 
+                                <a class="form-agreement__link" href="#">правилами пользования торговой площадкой</a> 
+                                и 
+                                <a class="form-agreement__link" href="#">возврата</a>
+                            </p>
+                        </div>
+                    </form>
                 </div>
             </main>
         </div>
