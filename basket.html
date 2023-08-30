@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Товары и точка</title>
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body class="page__body">
+        <div class="page__container">
+            <header class="header">
+                <div class="header__nav nav">
+                    <button class="nav__toggle" type="button">
+                        <span class="visually-hidden">Открыть меню.</span>
+                    </button>
+                    <a class="nav__logo" href="#">
+                        <img class="nav__logo-image" src="img/logo.png" width="106" heigth="56" alt="Логотип Wildberries">
+                    </a>
+                    <input class="nav__input-search" type="search">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a class="nav__link" href="#">Профиль</a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link" href="#">Корзина</a>
+                        </li>
+                    </ul>
+                </div>
+            </header>
+            <main class="main">
+                <div class="main__container">
+                    <section class="goods">
+                        <div class="goods__container">
+                            <h1>Корзина</h1>
+                            <div class="checkbox-all">
+                            <h2 class="visually-hidden">Товары в корзине</h2>
+                            <h3 class="visually-hidden">В наличии</h3>
+                            <form>
+                                <label>
+                                    <input type="checkbox" name="choose-all">
+                                    Выбрать все
+                                </label>
+                            </form>
+                            </div>
+                            <div class="goods-stock">
+                                <ul class="goods-stock__list">
+                                    <li class="goods-stock__item good-card">
+                                        <div class="good-card__image">
+                                            <div class="good-card__checkbox">
+                                                <form>
+                                                    <label>
+                                                        <input type="checkbox">
+                                                    </label>
+                                                </form>
+                                            </div>
+                                            <span class="good-card__size">56</span>
+                                            <a class="good-card__link" href="#">
+                                                <img class="good-card__photo" src="img/basket-1.jpg" width="80" height="106" alt="Футболка UZcotton мужская.">
+                                            </a>
+                                        </div>
+                                        <div class="good-card__count count">
+                                            <button class="count__minus" type="button"></button>
+                                            <input class="count__input" type="number" min="1">
+                                            <button class="count__plus" type="button"></button>
+                                        </div>
+                                        <div class="good-card__info">
+                                            <span class="good-card__info-price">522 com</span>
+                                            <span class="good-card__info-old-price">1051 com</span>
+                                            <a class="good-card__info-name" href="#">
+                                                Футболка UZcotton мужская
+                                            </a>
+                                            <span class="good-card__info-color">Цвет: белый</span>
+                                            <span class="good-card__info-storage">Коледино WB</span>
+                                            <span class="good-card__info-count">Осталось 2 шт.</span>
+                                        </div>
+                                        <div class="good-card__buttons card-button">
+                                            <div class="card-button__favoutites">
+                                                <button class="favorites" type="button">
+                                                    <span class="visually-hidden">В избранное.</span>
+                                                </button>
+                                            </div>
+                                        <div class="card-button__delete">
+                                            <button class="delete" type="button">
+                                                <span class="visually-hidden">Удалить.</span>
+                                            </button>
+                                        </div>
+                                        </div>
+                                    </li>
+                                    <li class="goods-stock__item good-card">
+                                        <div class="good-card__image">
+                                            <div class="good-card__checkbox">
+                                                <form>
+                                                    <label>
+                                                        <input type="checkbox">
+                                                    </label>
+                                                </form>
+                                            </div>
+                                            <span class="good-card__size">56</span>
+                                            <a class="good-card__link" href="#">
+                                                <img class="good-card__photo" src="img/basket-2.jpg" width="80" height="106" alt="Футболка UZcotton мужская.">
+                                            </a>
+                                        </div>
+                                        <div class="good-card__count count">
+                                            <button class="count__minus" type="button"></button>
+                                            <input class="count__input" type="number" min="1">
+                                            <button class="count__plus" type="button"></button>
+                                        </div>
+                                        <div class="good-card__info">
+                                            <span class="good-card__info-price">2 100 047 com</span>
+                                            <span class="good-card__info-old-price">2 300 047 com</span>
+                                            <a class="good-card__info-name" href="#">
+                                                Силиконовый чехол картхолдер (отверстия) для...
+                                            </a>
+                                            <span class="good-card__info-color">Цвет: прозрачный</span>
+                                            <span class="good-card__info-storage">Коледино WB</span>
+                                        </div>
+                                        <div class="good-card__buttons card-button">
+                                            <div class="card-button__favoutites">
+                                                <button class="favorites" type="button">
+                                                    <span class="visually-hidden">В избранное.</span>
+                                                </button>
+                                            </div>
+                                        <div class="card-button__delete">
+                                            <button class="delete" type="button">
+                                                <span class="visually-hidden">Удалить.</span>
+                                            </button>
+                                        </div>
+                                        </div>
+                                    </li>
+                                    <li class="goods-stock__item good-card">
+                                        <div class="good-card__image">
+                                            <div class="good-card__checkbox">
+                                                <form>
+                                                    <label>
+                                                        <input type="checkbox">
+                                                    </label>
+                                                </form>
+                                            </div>
+                                            <span class="good-card__size">56</span>
+                                            <a class="good-card__link" href="#">
+                                                <img class="good-card__photo" src="img/basket-3.jpg" width="80" height="106" alt="Футболка UZcotton мужская.">
+                                            </a>
+                                        </div>
+                                        <div class="good-card__count count">
+                                            <button class="count__minus" type="button"></button>
+                                            <input class="count__input" type="number" min="1">
+                                            <button class="count__plus" type="button"></button>
+                                        </div>
+                                        <div class="good-card__info">
+                                            <span class="good-card__info-price">494 com</span>
+                                            <span class="good-card__info-old-price">950 com</span>
+                                            <a class="good-card__info-name" href="#">
+                                                Карандаши цветные Faber-Castell "Замок", набор 24 цв...
+                                            </a>
+                                            <span class="good-card__info-storage">Коледино WB</span>
+                                            <span class="good-card__info-count">Осталось 2 шт.</span>
+                                        </div>
+                                        <div class="good-card__buttons card-button">
+                                            <div class="card-button__favoutites">
+                                                <button class="favorites" type="button">
+                                                    <span class="visually-hidden">В избранное.</span>
+                                                </button>
+                                            </div>
+                                        <div class="card-button__delete">
+                                            <button class="delete" type="button">
+                                                <span class="visually-hidden">Удалить.</span>
+                                            </button>
+                                        </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <h3>Отсутствуют</h3>
+                            <span>3 товара</span>
+                            <div class="goods-stock goods-stock--out-stock">
+                                <ul class="goods-stock__list">
+                                    <li class="goods-stock__item good-card">
+                                        <div class="good-card__image">
+                                            <div class="good-card__checkbox">
+                                                <form>
+                                                    <label>
+                                                        <input type="checkbox">
+                                                    </label>
+                                                </form>
+                                            </div>
+                                            <span class="good-card__size">56</span>
+                                            <a class="good-card__link" href="#">
+                                                <img class="good-card__photo" src="img/basket-1.jpg" width="80" height="106" alt="Футболка UZcotton мужская.">
+                                            </a>
+                                        </div>
+                                        <div class="good-card__count count">
+                                            <button class="count__minus" type="button"></button>
+                                            <input class="count__input" type="number" min="1">
+                                            <button class="count__plus" type="button"></button>
+                                        </div>
+                                        <div class="good-card__info">
+                                            <span class="good-card__info-price">522 com</span>
+                                            <span class="good-card__info-old-price">1051 com</span>
+                                            <a class="good-card__info-name" href="#">
+                                                Футболка UZcotton мужская
+                                            </a>
+                                            <span class="good-card__info-color">Цвет: белый</span>
+                                            <span class="good-card__info-storage">Коледино WB</span>
+                                            <span class="good-card__info-count">Осталось 2 шт.</span>
+                                        </div>
+                                        <div class="good-card__buttons card-button">
+                                            <div class="card-button__favoutites">
+                                                <button class="favorites" type="button">
+                                                    <span class="visually-hidden">В избранное.</span>
+                                                </button>
+                                            </div>
+                                        <div class="card-button__delete">
+                                            <button class="delete" type="button">
+                                                <span class="visually-hidden">Удалить.</span>
+                                            </button>
+                                        </div>
+                                        </div>
+                                    </li>
+                                    <li class="goods-stock__item good-card">
+                                        <div class="good-card__image">
+                                            <div class="good-card__checkbox">
+                                                <form>
+                                                    <label>
+                                                        <input type="checkbox">
+                                                    </label>
+                                                </form>
+                                            </div>
+                                            <span class="good-card__size">56</span>
+                                            <a class="good-card__link" href="#">
+                                                <img class="good-card__photo" src="img/basket-2.jpg" width="80" height="106" alt="Футболка UZcotton мужская.">
+                                            </a>
+                                        </div>
+                                        <div class="good-card__count count">
+                                            <button class="count__minus" type="button"></button>
+                                            <input class="count__input" type="number" min="1">
+                                            <button class="count__plus" type="button"></button>
+                                        </div>
+                                        <div class="good-card__info">
+                                            <span class="good-card__info-price">2 100 047 com</span>
+                                            <span class="good-card__info-old-price">2 300 047 com</span>
+                                            <a class="good-card__info-name" href="#">
+                                                Силиконовый чехол картхолдер (отверстия) для...
+                                            </a>
+                                            <span class="good-card__info-color">Цвет: прозрачный</span>
+                                            <span class="good-card__info-storage">Коледино WB</span>
+                                        </div>
+                                        <div class="good-card__buttons card-button">
+                                            <div class="card-button__favoutites">
+                                                <button class="favorites" type="button">
+                                                    <span class="visually-hidden">В избранное.</span>
+                                                </button>
+                                            </div>
+                                        <div class="card-button__delete">
+                                            <button class="delete" type="button">
+                                                <span class="visually-hidden">Удалить.</span>
+                                            </button>
+                                        </div>
+                                        </div>
+                                    </li>
+                                    <li class="goods-stock__item good-card">
+                                        <div class="good-card__image">
+                                            <div class="good-card__checkbox">
+                                                <form>
+                                                    <label>
+                                                        <input type="checkbox">
+                                                    </label>
+                                                </form>
+                                            </div>
+                                            <span class="good-card__size">56</span>
+                                            <a class="good-card__link" href="#">
+                                                <img class="good-card__photo" src="img/basket-3.jpg" width="80" height="106" alt="Футболка UZcotton мужская.">
+                                            </a>
+                                        </div>
+                                        <div class="good-card__count count">
+                                            <button class="count__minus" type="button"></button>
+                                            <input class="count__input" type="number" min="1">
+                                            <button class="count__plus" type="button"></button>
+                                        </div>
+                                        <div class="good-card__info">
+                                            <span class="good-card__info-price">494 com</span>
+                                            <span class="good-card__info-old-price">950 com</span>
+                                            <a class="good-card__info-name" href="#">
+                                                Карандаши цветные Faber-Castell "Замок", набор 24 цв...
+                                            </a>
+                                            <span class="good-card__info-storage">Коледино WB</span>
+                                            <span class="good-card__info-count">Осталось 2 шт.</span>
+                                        </div>
+                                        <div class="good-card__buttons card-button">
+                                            <div class="card-button__favoutites">
+                                                <button class="favorites" type="button">
+                                                    <span class="visually-hidden">В избранное.</span>
+                                                </button>
+                                            </div>
+                                        <div class="card-button__delete">
+                                            <button class="delete" type="button">
+                                                <span class="visually-hidden">Удалить.</span>
+                                            </button>
+                                        </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </main>
+        </div>
+    </body>
+</html>

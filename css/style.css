@@ -1,0 +1,22 @@
+/* Общие стили всей страницы */
+.page {
+  width: 100%;
+  background-color: F6F6FA;
+}
+
+.page__body {
+  width: 320px;
+  margin: 0 auto;
+}
+
+/* Header */
+.header {
+  width: 100%;
+  background-color: #6725A8;
+}
+
+/* Main */
+.main__container {
+  width: 100%;
+
+}
