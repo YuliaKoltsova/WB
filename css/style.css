@@ -20,15 +20,16 @@
 
 .page {
   width: 100%;
-  background-color: #F6F6FA;
+  background-color: #FFFFFF;
 }
 
 .page__body {
   width: 320px;
   margin: 0 auto;
-  background-color: #FFFFFF;
+  background-color: #F6F6FA;
   font-family: "Segoe UI", "Arial", sans-serif;
   font-size: 16px;
+  color: #000000;
 }
 
 /* HEADER */
@@ -54,7 +55,7 @@
   content: '';
   width: 100%;
   height: 25.4px;
-  background-color: #FFFFFF;
+  background-color: #F6F6FA;
   border-radius: 24px 24px 0px 0px;
   position: absolute;
   bottom: 0;
@@ -132,8 +133,11 @@
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 6px;
   margin: 0;
-  margin-right: 11px;
   position: relative;
+}
+
+.checkbox__control-mark-all {
+  margin-right: 11px;
 }
 
 .checkbox__input[type=checkbox]:checked+.checkbox__control-mark::after {
@@ -150,6 +154,17 @@
   border-color: #FFF;
 }
 
+/* Чекбокс в карточке товара */
+.good-card__checkbox {
+  position: absolute;
+}
+
+.checkbox-card__control-mark--card {
+  background-color: #FFFFFF;
+  top: 4px;
+  left: 4px;
+}
+
 /* Список товаров в корзине */
 .goods-stock__list {
   margin: 0;
@@ -157,7 +172,7 @@
   list-style-type: none;
 }
 
-/* Карточка товара */
+/* КАРТОЧКА ТОВАРА */
 /* Общие стили карточки товара */
 .good-card {
   padding: 12px 0 16px 0;
@@ -173,6 +188,162 @@
   top: 0;
 }
 
-.good-card__checkbox
+/* Информация в карточке товара на фото товара */
+.goods-stock__item {
+  display: grid;
+  grid-template-columns: 80px 192px;
+  grid-template-rows: auto auto;
+  column-gap: 16px;
+  row-gap: 12px;
+}
 
-/* Блок с размером товара */
+.good-card__image {
+  position: relative;
+}
+
+.good-card__size {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  background-color: #FFFFFF;
+  border-radius: 4px;
+  left: 4px;
+  bottom: 8px;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Количество товара */
+.count {
+  display: inline-block;
+	position: relative;
+  width: 80px;
+}
+
+.count input[type="number"] {
+	display: block;
+	height: 34px;
+	line-height: 34px;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	text-align: center;
+  border: none;
+  font-size: 14px;
+}
+
+.count input[type="number"]::-webkit-outer-spin-button,
+.count input[type="number"]::-webkit-inner-spin-button {
+	display: none;
+}
+
+.count__button {
+  position: absolute;
+  top: 0;
+  background-color: #FFFFFF;
+}
+
+.count__button--minus {
+	left: 0;
+	bottom: 0;
+	width: 20px;
+	padding: 0;
+	display: block;
+	border: none;
+  background-image: url(../img/minus-icon.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 4px 0 0 4px;
+}
+
+.count__button--plus {
+	right: 0;
+	bottom: 0;
+	width: 20px;
+	padding: 0;
+	display: block;
+	text-align: center;
+	border: none;
+  background-image: url(../img/plus-icon.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 0 4px 4px 0;
+}
+
+.good-card__info {
+  display: flex;
+  flex-direction: column;
+}
+
+.good-card__price {
+  display: flex;
+}
+
+.good-card__info-price {
+  font-weight: 700;
+  margin-right: 5px;
+  margin-bottom: 2px;
+}
+
+.good-card__info-old-price {
+  font-size: 13px;
+  color: #A0A0A4;
+  text-decoration: line-through;
+}
+
+.good-card__info-name {
+  text-decoration: none;
+  font-size: 14px;
+  color: #000000;
+  margin-bottom: 8px;
+}
+
+.good-card__info-color {
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.good-card__info-storage {
+  font-size: 13px;
+  color: #A0A0A4;
+}
+
+.good-card__info-bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.good-card__buttons {
+  display: flex;
+}
+
+.good-card__count-info {
+  font-size: 13px;
+  color: #FF3B30;
+  align-self: center;
+}
+
+.card-button {
+  padding: 8px 12px 6px 12px;
+}
+
+.card-button__button {
+  width: 20px;
+  height: 20px;
+  border: none;
+  background-color: transparent;
+  display: block;
+}
+
+.card-button__button--favorite {
+  background-image: url(../img/favorite-icon.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.card-button__button--delete {
+  background-image: url(../img/delete-icon.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
