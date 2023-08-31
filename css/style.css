@@ -158,7 +158,7 @@
 }
 
 /* Чекбокс в карточке товара */
-.good-card__checkbox {
+.goods-card__checkbox {
   position: relative;
 }
 
@@ -170,6 +170,10 @@
 }
 
 /* Список товаров в корзине */
+.goods-stock {
+  margin-bottom: 32px;
+}
+
 .goods-stock__list {
   margin: 0;
   padding: 0;
@@ -178,12 +182,12 @@
 
 /* КАРТОЧКА ТОВАРА */
 /* Общие стили карточки товара */
-.good-card {
-  padding: 12px 0 16px 0;
+.goods-card {
+  padding: 12px 0 10px 0;
   position: relative;
 }
 
-.good-card::before {
+.goods-card::before {
   content: '';
   position: absolute;
   width: 100%;
@@ -201,11 +205,11 @@
   row-gap: 12px;
 }
 
-.good-card__image {
+.goods-card__image {
   position: relative;
 }
 
-.good-card__size {
+.goods-card__size {
   position: absolute;
   width: 22px;
   height: 22px;
@@ -215,6 +219,7 @@
   bottom: 8px;
   font-size: 14px;
   text-align: center;
+  z-index: 2;
 }
 
 /* Количество товара */
@@ -281,30 +286,30 @@
   border-radius: 0 4px 4px 0;
 }
 
-.good-card__info {
+.goods-card__info {
   display: flex;
   flex-direction: column;
 }
 
-.good-card__price {
+.goods-card__price {
   display: flex;
 }
 
-.good-card__info-price {
+.goods-card__info-price {
   font-weight: 700;
   margin-right: 5px;
   margin-bottom: 2px;
   line-height: 24px;
 }
 
-.good-card__info-old-price {
+.goods-card__info-old-price {
   font-size: 13px;
   color: #A0A0A4;
   text-decoration: line-through;
   line-height: 16px;
 }
 
-.good-card__info-name {
+.goods-card__info-name {
   text-decoration: none;
   font-size: 14px;
   color: #000000;
@@ -312,32 +317,32 @@
   line-height: 20px;
 }
 
-.good-card__info-color {
+.goods-card__info-color {
   font-size: 13px;
   margin-bottom: 8px;
   line-height: 16px;
 }
 
-.good-card__info-storage {
+.goods-card__info-storage {
   font-size: 13px;
   color: #A0A0A4;
   line-height: 16px;
 }
 
-.good-card__info-bottom {
+.goods-card__info-bottom {
   display: flex;
   justify-content: space-between;
 }
 
-.good-card__info-bottom--left {
+.goods-card__info-bottom--left {
   justify-content: end;
 }
 
-.good-card__buttons {
+.goods-card__buttons {
   display: flex;
 }
 
-.good-card__count-info {
+.goods-card__count-info {
   font-size: 13px;
   color: #FF3B30;
   align-self: center;
@@ -371,9 +376,39 @@
 /* Раздел "Отстутствуют" */
 .goods__text-container {
   display: flex;
+  font-weight: 600;
+  line-height: 24px;
+  margin-bottom: 16px;
 }
 
 .goods__title {
-  font-weight: 600;
-  line-height: 24px;
+  margin: 0;
+  margin-right: 4px;
+}
+
+.goods-card--out-stock {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 6px;
+}
+
+.goods-card__all-info {
+  display: flex;
+  column-gap: 16px;
+}
+
+.goods-card__info-bottom--out-stock {
+  justify-content: end;
+}
+
+.goods-card__photo--out-stock {
+  filter: grayscale(100%);
+}
+
+.goods-card__info--out-stock {
+  color: #A0A0A4;
+}
+
+.goods-card__info-name--out-stock {
+  color: inherit;
 }
