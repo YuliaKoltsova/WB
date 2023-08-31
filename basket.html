@@ -63,9 +63,9 @@
             </header>
             <main class="main">
                 <div class="main__container">
-                    <h1 class="main__title">Корзина</h1>
                     <form class="main__form" action="#" method="post">
                         <section class="goods">
+                        <h1 class="main__title">Корзина</h1>
                         <div class="goods__container">
                             <h2 class="visually-hidden">Товары в корзине</h2>
                             <h3 class="visually-hidden">В наличии</h3>
@@ -222,16 +222,16 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div class="goods__text-container">                            
-                                <h3 class="goods__title">Отсутствуют</h3>
-                                <span class="goods__text">· 3 товара</span>
-                            </div>
-                            <div class="goods-stock">
+                            <div class="goods-stock goods-stock--out-stock">
+                                <div class="goods__text-container">                            
+                                    <h3 class="goods__title">Отсутствуют</h3>
+                                    <span class="goods__text">· 3 товара</span>
+                                </div>
                                 <ul class="goods-stock__list">
                                     <li class="goods-stock__item goods-card goods-card--out-stock">
                                         <div class="goods-card__all-info">
                                             <div class="goods-card__image">
-                                            <span class="goods-card__size goods-card__size--out-stock">56</span>
+                                            <span class="goods-card__size">56</span>
                                             <a class="goods-card__link" href="#">
                                                 <img class="goods-card__photo goods-card__photo--out-stock" src="img/basket-1.jpg" width="80" height="106" alt="Футболка UZcotton мужская.">
                                             </a>
@@ -290,9 +290,10 @@
                                     <li class="goods-stock__item goods-card goods-card--out-stock">
                                         <div class="goods-card__all-info">
                                             <div class="goods-card__image">
-                                            <a class="goods-card__link" href="#">
-                                                <img class="goods-card__photo goods-card__photo--out-stock" src="img/basket-3.jpg" width="80" height="106" alt="Карандаши цветные Faber-Castell, набор 24 цвeта">
-                                            </a>
+                                                <span class="goods-card__size">56/54/52...</span>
+                                                <a class="goods-card__link" href="#">
+                                                    <img class="goods-card__photo goods-card__photo--out-stock" src="img/basket-3.jpg" width="80" height="106" alt="Карандаши цветные Faber-Castell, набор 24 цвeта">
+                                                </a>
                                             </div>
                                             <div class="goods-card__info goods-card__info--out-stock">
                                             <a class="goods-card__info-name goods-card__info-name--out-stock" href="#">
@@ -319,79 +320,103 @@
                             </div>
                         </div>
                         </section>
-                        <section class="delivery">
-                        <h2>Способ доставки</h2>
-                        <button class="delivery__button card-button" type="button">Изменить</button>
-                        <h3>Пункт выдачи</h3>
-                        <span class="delivery__adress">Бишкек, улица Ахматбека Суюмбаева, 12/1</span>
-                        <span class="delivery__rating">4.99</span>
-                        <span class="delivery__working-hours">Ежедневно с 10 до 21 </span>
-                        <h3>Стоимость доставки</h3>
-                        <span class="delivery__price">Бесплатно</span>
-                        <h3 class="visually-hidden">Сроки доставки.</h3>
-                        <div class="delivery__delivery-terms">
-                            <span class="delivery__dates">5—6 февраля</span>
-                            <img class="delivery__product-thumbnail" src="img/basket-1-min.jpg" width="41" height="56" alt="Футболка UZcotton мужская.">
-                            <div class="delivery__product-thumbnail-container">
-                                <span class="delivery__product-thumbnail-count">184</span>
-                                <img class="delivery__product-thumbnail" src="img/basket-2-min.jpg" width="41" height="56" alt="Силиконовый чехол картхолдер.">
+                        <section class="delivery block">
+                            <div class="delivery__container container">
+                                <div class="delivery__title-container title-container">
+                                    <h2 class="delivery__title title">Способ доставки</h2>
+                                    <button class="delivery__button choose-button" type="button">Изменить</button>
+                                </div>
+                                <div class="delivery__point">
+                                    <h3 class="delivery__subtitle subtitle">Пункт выдачи</h3>
+                                    <span class="delivery__text delivery__text--adress">Бишкек, улица Ахматбека Суюмбаева, 12/1</span>
+                                    <div class="delivery__description">
+                                        <span class="delivery__rating description">4.99</span>
+                                        <span class="delivery__working-hours description">Ежедневно с 10 до 21 </span>
+                                    </div>
+                                </div>
+                                <div class="delivery__terms">
+                                    <div class="delivery__subtitle-container">
+                                        <h3 class="delivery__subtitle subtitle">Стоимость доставки</h3>
+                                        <span class="delivery__text delivery__text--terms">Бесплатно</span>
+                                    </div>
+                                    <h3 class="visually-hidden">Сроки доставки.</h3>
+                                    <div class="delivery__delivery-term">
+                                        <span class="delivery__subtitle subtitle">5—6 февраля</span>
+                                        <div class="delivery__goods">
+                                            <img class="delivery__product-thumbnail" src="img/basket-1-min.jpg" width="41" height="56" alt="Футболка UZcotton мужская.">
+                                            <div class="delivery__product-thumbnail-container">
+                                                <span class="delivery__product-thumbnail-count">184</span>
+                                                <img class="delivery__product-thumbnail" src="img/basket-2-min.jpg" width="41" height="56" alt="Силиконовый чехол картхолдер.">
+                                            </div>
+                                            <div class="delivery__product-thumbnail-container">
+                                                <span class="delivery__product-thumbnail-count">2</span>
+                                                <img class="delivery__product-thumbnail" src="img/basket-3-min.jpg" width="41" height="56" alt="Карандаши цветные Faber-Castell, набор 24 цвета.">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="delivery__delivery-term">
+                                        <span class="delivery__subtitle subtitle">7—8 февраля</span>
+                                        <div class="delivery__goods">
+                                            <div class="delivery__product-thumbnail-container">
+                                                <span class="delivery__product-thumbnail-count">16</span>
+                                                <img class="delivery__product-thumbnail" src="img/basket-2-min.jpg" width="41" height="56" alt="Силиконовый чехол картхолдер.">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="delivery__note delivery-info">Обратная доставка товаров на склад при отказе — бесплатно</p>
                             </div>
-                            <div class="delivery__product-thumbnail-container">
-                                <span class="delivery__product-thumbnail-count">2</span>
-                                <img class="delivery__product-thumbnail" src="img/basket-3-min.jpg" width="41" height="56" alt="Карандаши цветные Faber-Castell, набор 24 цвета.">
-                            </div>
-                        </div>
-                        <div class="delivery__delivery-terms">
-                            <span class="delivery__dates">7—8 февраля</span>
-                            <div class="delivery__product-thumbnail-container">
-                                <span class="delivery__product-thumbnail-count">16</span>
-                                <img class="delivery__product-thumbnail" src="img/basket-2-min.jpg" width="41" height="56" alt="Силиконовый чехол картхолдер.">
-                            </div>
-                        </div>
-                        <p class="delivery__note delivery-info">Обратная доставка товаров на склад при отказе — бесплатно</p>
                         </section>
-                        <section class="payment">
-                        <h2>Способ оплаты</h2>
-                        <button class="payment__button card-button" type="button">Изменить</button>
-                        <div class="payment__bank-card bank-card">
-                            <img class="bank-card__image" src="img/bank-card.png" width="32" height="24" alt="Логотип карты МИР.">
-                            <span class="bank-card__number">1234 56•• •••• 1234</span>
-                            <span class="bank-card__date">01/30</span>
-                            <p class="bank-card__note">Спишем оплату с карты при получении</p>
-                        </div>
+                        <section class="payment block">
+                            <div class="payment__container container">
+                                <div class="payment__title-container title-container">
+                                    <h2 class="payment__title title">Способ оплаты</h2>
+                                    <button class="payment__button choose-button" type="button">Изменить</button>
+                                </div>
+                                <div class="payment__bank-card bank-card">
+                                    <div class="bank-card__info">
+                                        <img class="bank-card__image" src="img/bank-card.png" width="32" height="24" alt="Логотип карты МИР.">
+                                        <span class="bank-card__number text">1234 56•• •••• 1234</span>
+                                        <span class="bank-card__date text">01/30</span>
+                                    </div>
+                                    <p class="bank-card__note">Спишем оплату с карты при получении</p>
+                                </div>
+                            </div>
                         </section>
-                        <section class="receiver">
-                        <h2>Получатель</h2>
-                        <div class="receiver__form from">
-                            <ul class="form__list">
-                                <li class="form__item">
-                                    <label>
-                                        <input class="form__input" type="text" name="name" placeholder="Имя">
-                                    </label>
-                                </li>
-                                <li class="form__item">
-                                    <label>
-                                        <input class="form__input" type="text" name="surname" placeholder="Фамилия">
-                                    </label>
-                                </li>
-                                <li class="form__item">
-                                    <label>
-                                        <input class="form__input" type="email" name="email" placeholder="Электронная почта">
-                                    </label>
-                                </li>
-                                <li class="form__item">
-                                    <label>
-                                        <input class="form__input" type="tel" name="phone" placeholder="Телефон">
-                                    </label>
-                                </li>
-                                <li class="form__item">
-                                    <label>
-                                        <input class="form__input" type="number" name="taxpayer-number" placeholder="ИНН">
-                                    </label>
-                                    <span class="form__item-note">Для таможенного оформления</span>
-                                </li>
-                            </ul>
-                        </div>
+                        <section class="receiver block">
+                            <div class="receiver__container container">
+                                <h2 class="receiver__title title">Получатель</h2>
+                                <div class="receiver__form from">
+                                    <ul class="form__list">
+                                        <li class="form__item">
+                                            <label>
+                                                <input class="form__input" type="text" name="name" placeholder="Имя">
+                                            </label>
+                                        </li>
+                                        <li class="form__item">
+                                            <label>
+                                                <input class="form__input" type="text" name="surname" placeholder="Фамилия">
+                                            </label>
+                                        </li>
+                                        <li class="form__item">
+                                            <label>
+                                                <input class="form__input" type="email" name="email" placeholder="Электронная почта">
+                                            </label>
+                                        </li>
+                                        <li class="form__item">
+                                            <label>
+                                                <input class="form__input" type="tel" name="phone" placeholder="Телефон">
+                                            </label>
+                                        </li>
+                                        <li class="form__item">
+                                            <label>
+                                                <input class="form__input" type="number" name="taxpayer-number" placeholder="ИНН">
+                                            </label>
+                                            <span class="form__item-note">Для таможенного оформления</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </section>
                         <section class="total">
                         <h2>Итого</h2>

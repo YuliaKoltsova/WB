@@ -100,10 +100,6 @@
 
 /* MAIN */
 /* Общие стили main */
-.main__container {
-  padding: 0 16px 0 16px;
-}
-
 .main__title {
   margin: 0;
   font-size: 20px;
@@ -170,6 +166,14 @@
 }
 
 /* Список товаров в корзине */
+.goods {
+  padding: 0 16px 0 16px;
+}
+
+.goods__container {
+  margin-bottom: 16px;
+}
+
 .goods-stock {
   margin-bottom: 32px;
 }
@@ -211,7 +215,8 @@
 
 .goods-card__size {
   position: absolute;
-  width: 22px;
+  min-width: 22px;
+  max-width: 72px;
   height: 22px;
   background-color: #FFFFFF;
   border-radius: 4px;
@@ -220,6 +225,7 @@
   font-size: 14px;
   text-align: center;
   z-index: 2;
+  padding: 0 2px 0 2px;
 }
 
 /* Количество товара */
@@ -411,4 +417,203 @@
 
 .goods-card__info-name--out-stock {
   color: inherit;
+}
+
+/* Раздел "Способы доставки" */
+.block {
+  background-color: #FFFFFF;
+  width: 320px;
+  padding: 0;
+  border-radius: 16px;
+  margin-bottom: 12px;
+}
+
+.container {
+  padding: 16px 16px 24px 16px;
+}
+
+.title-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: -0.2px;
+  margin: 0;
+}
+
+.choose-button {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #CB11AB;
+  border: none;
+  background-color: transparent;
+}
+
+.subtitle {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  margin: 0;
+}
+
+.delivery__point {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.delivery__text {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.delivery__text--adress {
+  margin-bottom: 4px;
+}
+
+.delivery__text--terms {
+  margin-bottom: 0;
+}
+
+.delivery__subtitle-container {
+  margin-bottom: 16px;
+}
+
+.delivery__description {
+  display: flex;
+  column-gap: 8px;
+}
+
+.delivery__rating {
+  padding-left: 13px;
+  position: relative;
+}
+
+.delivery__rating::before {
+  content: '';
+  background-image: url(../img/rating-icon.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 12px;
+  height: 12px;
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 2px;
+}
+
+.description {
+  font-size: 13px;
+  line-height: 16px;
+}
+
+.delivery__goods {
+  display: flex;
+  column-gap: 8px;
+}
+
+.delivery__delivery-term {
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+  margin-bottom: 24px; 
+}
+
+.delivery__product-thumbnail-container {
+  position: relative;
+}
+
+.delivery__product-thumbnail-count {
+  position: absolute;
+  background-color: #F55123;
+  border-radius: 16px;
+  color: #FFFFFF;
+  padding: 0 5px 1px 5px;
+  height: 16px;
+  text-align: center;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 18px;
+  right: -4px;
+  top: -8px;
+}
+
+.delivery__note {
+  font-size: 13px;
+  line-height: 16px;
+  padding-left: 38px;
+  position: relative;
+  margin: 0;
+}
+
+.delivery__note::before {
+  content: '';
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  background-image: url(../img/delivery-icon.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  left: 8px;
+  top: 5px;
+}
+
+/* Способы оплаты */
+.bank-card__info {
+  display: flex;
+  column-gap: 8px;
+  margin-bottom: 8px;
+}
+
+.bank-card__number {
+  margin-right: 4px;
+}
+
+.text {
+  line-height: 24px; 
+}
+
+.bank-card__note {
+  margin: 0;
+  font-size: 13px;
+  line-height: 16px;
+  color: #A0A0A4;
+}
+
+/* Получатель */
+.receiver__title {
+  margin-bottom: 2px;
+}
+
+.form__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  row-gap: 16px;
+  flex-direction: column;
+}
+
+.form__item {
+  padding: 13px 0 16px 0;
+}
+
+.form__input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  font-size: 16px;
+  line-height: 24px;
+  color: #A0A0A4;
+}
+
+.form__item-note {
+  font-size: 12px;
+  line-height: 14px;
 }
