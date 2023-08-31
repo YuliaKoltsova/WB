@@ -112,7 +112,7 @@
                                             <span class="good-card__info-storage">Коледино WB</span>
                                         </div>
                                         <div class="good-card__count count">
-                                            <button class="count__button count__button--minus"  type="button"></button>
+                                            <button class="count__button count__button--minus count__button--minus-none"  type="button"></button>
                                             <input class="count__input" type="number" min="1" value="1">
                                             <button class="count__button count__button--plus" type="button"></button>
                                         </div>
@@ -161,7 +161,7 @@
                                             <input class="count__input" type="number" min="1" value="200">
                                             <button class="count__button count__button--plus" type="button"></button>
                                         </div>
-                                        <div class="good-card__info-bottom">
+                                        <div class="good-card__info-bottom good-card__info-bottom--left">
                                             <div class="good-card__buttons">
                                                 <div class="good-card__button card-button">
                                                     <button class="card-button__button card-button__button--favorite" type="button">
@@ -205,6 +205,7 @@
                                             <button class="count__button count__button--plus" type="button"></button>
                                         </div>
                                         <div class="good-card__info-bottom">
+                                            <span class="good-card__count-info">Осталось 2 шт.</span>
                                             <div class="good-card__buttons">
                                                 <div class="good-card__button card-button">
                                                     <button class="card-button__button card-button__button--favorite" type="button">
@@ -221,8 +222,10 @@
                                     </li>
                                 </ul>
                             </div>
-                            <h3>Отсутствуют</h3>
-                            <span>3 товара</span>
+                            <div class="goods__text-container">                            
+                                <h3 class="goods__title">Отсутствуют</h3>
+                                <span class="goods__text">3 товара</span>
+                            </div>
                             <div class="goods-stock goods-stock--out-stock">
                                 <ul class="goods-stock__list">
                                     <li class="goods-stock__item good-card">
@@ -232,100 +235,93 @@
                                                 <img class="good-card__photo" src="img/basket-1.jpg" width="80" height="106" alt="Футболка UZcotton мужская.">
                                             </a>
                                         </div>
-                                        <div class="good-card__count count">
-                                            <button class="count__minus" type="button"></button>
-                                            <input class="count__input" type="number" min="1">
-                                            <button class="count__plus" type="button"></button>
-                                        </div>
                                         <div class="good-card__info">
-                                            <span class="good-card__info-price">522 com</span>
-                                            <span class="good-card__info-old-price">1051 com</span>
+                                            <div class="good-card__price">
+                                                <span class="good-card__info-price">522 com</span>
+                                                <span class="good-card__info-old-price">1051 com</span>
+                                            </div>
                                             <a class="good-card__info-name" href="#">
                                                 Футболка UZcotton мужская
                                             </a>
                                             <span class="good-card__info-color">Цвет: белый</span>
                                             <span class="good-card__info-storage">Коледино WB</span>
-                                            <span class="good-card__info-count">Осталось 2 шт.</span>
                                         </div>
-                                        <div class="good-card__buttons card-button">
-                                            <div class="card-button__favoutites">
-                                                <button class="favorites" type="button">
+                                        <div class="good-card__info-bottom">
+                                            <div class="good-card__buttons">
+                                                <div class="good-card__button card-button">
+                                                    <button class="card-button__button card-button__button--favorite" type="button">
                                                     <span class="visually-hidden">В избранное.</span>
-                                                </button>
+                                                    </button>
+                                                </div>
+                                                <div class="good-card__button card-button">
+                                                    <button class="card-button__button card-button__button--delete" type="button">
+                                                    <span class="visually-hidden">Удалить.</span>
+                                                    </button>
+                                                </div>
                                             </div>
-                                        <div class="card-button__delete">
-                                            <button class="delete" type="button">
-                                                <span class="visually-hidden">Удалить.</span>
-                                            </button>
-                                        </div>
                                         </div>
                                     </li>
                                     <li class="goods-stock__item good-card">
                                         <div class="good-card__image">
-                                            <span class="good-card__size">56</span>
                                             <a class="good-card__link" href="#">
                                                 <img class="good-card__photo" src="img/basket-2.jpg" width="80" height="106" alt="Силиконовый чехол картхолдер.">
                                             </a>
                                         </div>
-                                        <div class="good-card__count count">
-                                            <button class="count__minus" type="button"></button>
-                                            <input class="count__input" type="number" min="1">
-                                            <button class="count__plus" type="button"></button>
-                                        </div>
                                         <div class="good-card__info">
-                                            <span class="good-card__info-price">2 100 047 com</span>
-                                            <span class="good-card__info-old-price">2 300 047 com</span>
+                                            <div class="good-card__price">
+                                                <span class="good-card__info-price">2 100 047 com</span>
+                                                <span class="good-card__info-old-price">2 300 047 сом</span>
+                                            </div>
                                             <a class="good-card__info-name" href="#">
                                                 Силиконовый чехол картхолдер (отверстия) для...
                                             </a>
-                                            <span class="good-card__info-color">Цвет: прозрачный</span>
+                                            <span class="good-card__info-color">Цвет: прозрачныйs</span>
                                             <span class="good-card__info-storage">Коледино WB</span>
                                         </div>
-                                        <div class="good-card__buttons card-button">
-                                            <div class="card-button__favoutites">
-                                                <button class="favorites" type="button">
+                                        <div class="good-card__info-bottom good-card__info-bottom--left">
+                                            <div class="good-card__buttons">
+                                                <div class="good-card__button card-button">
+                                                    <button class="card-button__button card-button__button--favorite" type="button">
                                                     <span class="visually-hidden">В избранное.</span>
-                                                </button>
+                                                    </button>
+                                                </div>
+                                                <div class="good-card__button card-button">
+                                                    <button class="card-button__button card-button__button--delete" type="button">
+                                                    <span class="visually-hidden">Удалить.</span>
+                                                    </button>
+                                                </div>
                                             </div>
-                                        <div class="card-button__delete">
-                                            <button class="delete" type="button">
-                                                <span class="visually-hidden">Удалить.</span>
-                                            </button>
-                                        </div>
                                         </div>
                                     </li>
                                     <li class="goods-stock__item good-card">
                                         <div class="good-card__image">
-                                            <span class="good-card__size">56</span>
                                             <a class="good-card__link" href="#">
-                                                <img class="good-card__photo" src="img/basket-3.jpg" width="80" height="106" alt="Карандаши цветные Faber-Castell, набор 24 цвета.">
+                                                <img class="good-card__photo" src="img/basket-3.jpg" width="80" height="106" alt="Карандаши цветные Faber-Castell, набор 24 цвeта">
                                             </a>
                                         </div>
-                                        <div class="good-card__count count">
-                                            <button class="count__minus" type="button"></button>
-                                            <input class="count__input" type="number" min="1">
-                                            <button class="count__plus" type="button"></button>
-                                        </div>
                                         <div class="good-card__info">
-                                            <span class="good-card__info-price">494 com</span>
-                                            <span class="good-card__info-old-price">950 com</span>
+                                            <div class="good-card__price">
+                                                <span class="good-card__info-price">494 com</span>
+                                                <span class="good-card__info-old-price">950 com</span>
+                                            </div>
                                             <a class="good-card__info-name" href="#">
                                                 Карандаши цветные Faber-Castell "Замок", набор 24 цв...
                                             </a>
                                             <span class="good-card__info-storage">Коледино WB</span>
-                                            <span class="good-card__info-count">Осталось 2 шт.</span>
                                         </div>
-                                        <div class="good-card__buttons card-button">
-                                            <div class="card-button__favoutites">
-                                                <button class="favorites" type="button">
+                                        <div class="good-card__info-bottom good-card__info-bottom--left">
+                                            <div class="good-card__buttons">
+                                                <div class="good-card__button card-button">
+                                                    <button class="card-button__button card-button__button--favorite" type="button">
                                                     <span class="visually-hidden">В избранное.</span>
-                                                </button>
+                                                    </button>
+                                                </div>
+                                                <div class="good-card__button card-button">
+                                                    <button class="card-button__button card-button__button--delete" type="button">
+                                                    <span class="visually-hidden">Удалить.</span>
+                                                    </button>
+                                                </div>
                                             </div>
-                                        <div class="card-button__delete">
-                                            <button class="delete" type="button">
-                                                <span class="visually-hidden">Удалить.</span>
-                                            </button>
-                                        </div>
                                         </div>
                                     </li>
                                 </ul>
