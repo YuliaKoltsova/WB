@@ -10,6 +10,14 @@
   clip: rect(0 0 0 0);
 }
 
+@font-face {
+  font-family: "Segoe UI";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/segoeui.woff2") format("woff2"), url("../fonts/segoeui.woff") format("woff");
+  font-display: swap;
+}
+
 .page {
   width: 100%;
   background-color: #F6F6FA;
@@ -19,6 +27,8 @@
   width: 320px;
   margin: 0 auto;
   background-color: #FFFFFF;
+  font-family: "Segoe UI", "Arial", sans-serif;
+  font-size: 16px;
 }
 
 /* HEADER */
@@ -89,6 +99,51 @@
 
 /* MAIN */
 .main__container {
-  width: 100%;
+  padding: 0 16px 0 16px;
+}
 
+.main__title {
+  margin: 0;
+  font-size: 20px;
+  margin-bottom: 13.5px;
+}
+
+/* Чекбоксы */
+.checkbox {
+  display: flex;
+  justify-content: space-between;
+}
+
+.checkbox__element {
+  display: flex;
+}
+
+.checkbox__hidden-element {
+  display: flex;
+  align-items: end;
+}
+
+.checkbox__control-mark {
+  display: block;
+  width: 22px;
+  height: 22px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  margin: 0;
+  margin-right: 11px;
+  position: relative;
+}
+
+.checkbox__input[type=checkbox]:checked+.checkbox__control-mark::after {
+  content: '';
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  background-image: url(../img/checkbox-checked-icon.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.checkbox__input[type=checkbox]:checked+.checkbox__control-mark {
+  border-color: #FFF;
 }
