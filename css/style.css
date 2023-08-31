@@ -29,6 +29,7 @@
   background-color: #F6F6FA;
   font-family: "Segoe UI", "Arial", sans-serif;
   font-size: 16px;
+  line-height: 24px;
   color: #000000;
 }
 
@@ -544,15 +545,18 @@
   top: -8px;
 }
 
-.delivery__note {
+.note {
   font-size: 13px;
   line-height: 16px;
-  padding-left: 38px;
   position: relative;
   margin: 0;
 }
 
-.delivery__note::before {
+.delivery-info {
+  padding-left: 38px;
+}
+
+.delivery-info::before {
   content: '';
   position: absolute;
   width: 22px;
@@ -587,6 +591,10 @@
 }
 
 /* Получатель */
+.receiver__container {
+  padding-bottom: 8px;
+}
+
 .receiver__title {
   margin-bottom: 2px;
 }
@@ -616,4 +624,97 @@
 .form__item-note {
   font-size: 12px;
   line-height: 14px;
+}
+
+/* Итого */
+.total__container {
+  padding: 8px 16px 0 16px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+}
+
+.total__title-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.total__table {
+  width: 100%;
+  padding: 0;
+}
+
+.total__second-column {
+  text-align: end;
+}
+
+.total__wrapper {
+  background-color: #F0ECF4;
+  border-radius: 8px;
+  padding: 8px 8px 12px 8px;
+}
+
+.checkbox-element__label--total {
+  font-size: 13px;
+  line-height: 16px;
+  display: flex;
+  align-self: center;
+}
+
+.checkbox-element__control-mark-label-total {
+  margin-right: 8px;
+}
+
+.total__payment-note {
+  font-size: 13px;
+  line-height: 16px;
+}
+
+.total__payment {
+  margin-bottom: 24px;
+}
+
+.total__button-container {
+  width: 288px;
+  margin: 0 16px 0 16px;
+}
+
+.button {
+  display: flex;
+  width: 100%;
+  min-height: 44px;
+  padding: 0 32px 5px 32px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  border-radius: 8px;
+  background-color: #CB11AB;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #FFFFFF;
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+
+.total__form-agreement-text {
+  padding-left: 21px;
+  position: relative;
+}
+
+.total__form-agreement-text::before {
+  content: '';
+  background-image: url(../img/agreement-icon.svg);
+  width: 13px;
+  height: 24px;
+  display: block;
+  position: absolute;
+  left: 0;
+}
+
+.total__form-agreement-link {
+  text-decoration: none;
+  color: #000000;
 }

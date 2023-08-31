@@ -364,7 +364,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <p class="delivery__note delivery-info">Обратная доставка товаров на склад при отказе — бесплатно</p>
+                                <p class="delivery__note delivery-info note">Обратная доставка товаров на склад при отказе — бесплатно</p>
                             </div>
                         </section>
                         <section class="payment block">
@@ -419,43 +419,52 @@
                             </div>
                         </section>
                         <section class="total">
-                        <h2>Итого</h2>
-                        <span class="total__total price">2 101 063 сом</span>
-                        <table class="total__table">
-                            <tr class="total__table-row">
-                                <td >203 товара</td>
-                                <td>2 302 048 сом</td>
-                            </tr>
-                            <tr>
-                                <td>Скидка</td>
-                                <td>−200 985 сом</td>
-                            </tr>
-                            <tr>
-                                <td>Доставка</td>
-                                <td>Бесплатно</td>
-                            </tr>
-                        </table>
-                        <div class="total__delivery-info delivery-info">
-                            <p>Обратная доставка товаров на склад при отказе — бесплатно</p>
-                        </div>
-                        <div class="total__payment">
-                            <div class="total__payment-checkbox">
-                                <label>
-                                    <input type="checkbox">
-                                    Списать оплату сразу
-                                </label>
+                            <div class="total__container">
+                                <div class="total__price-container">
+                                    <div class="total__title-container">
+                                        <h2 class="total__title title">Итого</h2>
+                                        <span class="total__total title">2 101 063 сом</span>
+                                    </div>
+                                    <table class="total__table">
+                                        <tr class="total__table-row">
+                                            <td>203 товара</td>
+                                            <td class="total__second-column">2 302 048 сом</td>
+                                        </tr>
+                                        <tr class="total__table-row">
+                                            <td>Скидка</td>
+                                            <td class="total__second-column">−200 985 сом</td>
+                                        </tr>
+                                        <tr class="total__table-row">
+                                            <td>Доставка</td>
+                                            <td class="total__second-column">Бесплатно</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="total__delivery-info total__wrapper">
+                                    <p class="delivery-info note">Обратная доставка товаров на склад при отказе — бесплатно</p>
+                                </div>
+                                <div class="total__payment total__wrapper">
+                                    <div class="total__payment-checkbox checkbox-element">
+                                        <label class="checkbox-element__label checkbox-element__label--total">
+                                            <input class="checkbox-element__input visually-hidden" type="checkbox" name="total-payment">
+                                            <span class="checkbox-element__control-mark checkbox-element__control-mark-label-total"></span>
+                                            Списать оплату сразу
+                                        </label>
+                                    </div>
+                                    <span class="total__payment-note">Спишем оплату с карты при получении</span>
+                                </div>
                             </div>
-                            <span class="total__payment-note">Спишем оплату с карты при получении</span>
-                        </div>
+                            <div class="total__button-container">
+                                <button class="total__button button" type="submit">Заказать</button>
+                                <div class="total__form-agreement">
+                                    <p class="total__form-agreement-text note">Соглашаюсь с 
+                                        <a class="total__form-agreement-link" href="#">правилами пользования торговой площадкой</a> 
+                                        и 
+                                        <a class="total__form-agreement-link" href="#">возврата</a>
+                                    </p>
+                                </div>
+                            </div>
                         </section>
-                        <button type="button">Заказать</button>
-                        <div class="main__form-agreement form-agreement">
-                            <p class="form-agreement__text">Соглашаюсь с 
-                                <a class="form-agreement__link" href="#">правилами пользования торговой площадкой</a> 
-                                и 
-                                <a class="form-agreement__link" href="#">возврата</a>
-                            </p>
-                        </div>
                     </form>
                 </div>
             </main>
