@@ -98,6 +98,7 @@
 }
 
 /* MAIN */
+/* Общие стили main */
 .main__container {
   padding: 0 16px 0 16px;
 }
@@ -109,9 +110,10 @@
 }
 
 /* Чекбоксы */
-.checkbox {
+.goods__checkbox-all {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 16px;
 }
 
 .checkbox__element {
@@ -147,3 +149,30 @@
 .checkbox__input[type=checkbox]:checked+.checkbox__control-mark {
   border-color: #FFF;
 }
+
+/* Список товаров в корзине */
+.goods-stock__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+/* Карточка товара */
+/* Общие стили карточки товара */
+.good-card {
+  padding: 12px 0 16px 0;
+  position: relative;
+}
+
+.good-card::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.1);
+  top: 0;
+}
+
+.good-card__checkbox
+
+/* Блок с размером товара */
