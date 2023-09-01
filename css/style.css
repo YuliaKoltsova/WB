@@ -651,14 +651,53 @@
 
 .form__item {
   padding: 13px 0 16px 0;
+  position: relative;
+  width: 100%;
 }
 
 .form__input {
   width: 100%;
   border: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  font-size: 16px;
-  line-height: 24px;
+  font-size: inherit;
+  line-height: inherit;
+  color: #000000;
+}
+
+::placeholder {
+  color: #A0A0A4;
+}
+
+/* Анимация для формы */
+.form__item input {
+  background-color: #FFFFFF;
+  box-sizing: border-box;
+  color: #000;
+  font-size: inherit;
+  line-height: inherit; 
+  height: 24px;
+  width: 100%;
+}
+
+/* #cb11ab */
+
+.form__item label {
+  color: #000;
+  font-size: inherit;
+  line-height: inherit;
+  pointer-events: none;
+  position: absolute;
+  transition: all 200ms;
+  top: 12px;
+  left: 10px;
+}
+
+.form__item input:focus + label,
+.form__item input:not(:placeholder-shown) + label{
+  top: 0;
+  left: 0;
+  font-size: 12px; 
+  line-height: 14px;
   color: #A0A0A4;
 }
 
