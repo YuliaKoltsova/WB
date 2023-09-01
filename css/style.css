@@ -73,6 +73,8 @@
   width: 28px;
   height:28px;
   border: none;
+  padding: 0;
+  cursor: pointer;
 }
 
 .header__nav {
@@ -95,10 +97,6 @@
   display: flex;
   justify-content: space-between;
   padding: 14px 13px 0 13px;
-}
-
-.nav-top__toggle {
-  padding: 0;
 }
 
 .nav-top__toggle--open {
@@ -462,12 +460,10 @@
 }
 
 /* Раздел "Способы доставки" */
-.block {
+.wrapper {
   background-color: #FFFFFF;
-  width: 320px;
-  padding: 0;
+  width: 100%;
   border-radius: 16px;
-  margin-bottom: 12px;
 }
 
 .container {
@@ -545,7 +541,7 @@
   position: relative;
 }
 
-.delivery__product-thumbnail-count {
+.product-thumbnail-count {
   position: absolute;
   background-color: #F55123;
   border-radius: 16px;
@@ -558,6 +554,10 @@
   line-height: 18px;
   right: -4px;
   top: -8px;
+}
+
+.delivery {
+  margin-bottom: 12px;
 }
 
 .delivery-info {
@@ -579,6 +579,10 @@
 }
 
 /* Способы оплаты */
+.payment {
+  margin-bottom: 12px;
+}
+
 .bank-card__info {
   display: flex;
   column-gap: 8px;
@@ -599,6 +603,10 @@
 }
 
 /* Получатель */
+.receiver {
+  margin-bottom: 24px;
+}
+
 .receiver__container {
   padding-bottom: 8px;
 }
@@ -726,6 +734,7 @@
   background-color: #6725A8;
   min-width: 88px;
   position: relative;
+  margin-bottom: 56px;
 }
 
 .footer::before {
@@ -755,6 +764,10 @@
   background-color: #FFFFFF;
   justify-content: space-between;
   align-items: center;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  width: 320px;
 }
 
 .nav-mobile-bottom__item {
@@ -765,4 +778,8 @@
 
 .nav-mobile-bottom__link {
   display: flex;
+  position: relative;
 }
+
+
+
