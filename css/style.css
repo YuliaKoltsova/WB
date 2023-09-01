@@ -31,6 +31,7 @@
   font-size: 16px;
   line-height: 24px;
   color: #000000;
+  position: relative;
 }
 
 /* Шрифты на странице */
@@ -903,6 +904,13 @@
   left: 0;
   background-color: rgba(5, 0, 10, 0.30);
   z-index: 5;
+  overflow: auto;
+}
+
+.modal--mobile {
+  width: 320px;
+  left: 50%;
+  margin-left: -160px;
 }
 
 .title-container {
@@ -957,11 +965,20 @@
 .payment-modal__close-button {
   width: 24px;
   height: 24px;
-  background-image: url(../img/modal-close-icon.svg);
-  background-position: center;
-  background-repeat: no-repeat;
   border: none;
   background-color: transparent;
+}
+
+.payment-modal__icon {
+  fill: #A0A0A4;
+}
+
+.payment-modal__icon:hover {
+  fill: #000000;
+}
+
+.payment-modal__icon:active {
+  fill: rgba(0, 0, 0, 0.8);
 }
 
 .payment-modal__button {
@@ -974,5 +991,9 @@
   overflow: hidden;
   position: fixed;
   bottom: 0;
-  width: 320px;
+  width: 288px;
+}
+
+.modal__payment-modal--close {
+  display: none;
 }
