@@ -892,3 +892,87 @@
 .nav-mobile-bottom__icon--active {
   fill: #CB11AB;
 }
+
+/* Модальные окна */
+.modal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  top: 0;
+  left: 0;
+  background-color: rgba(5, 0, 10, 0.30);
+  z-index: 5;
+}
+
+.title-container {
+  margin-bottom: 13px;
+}
+
+.payment-modal__container {
+  background-color: #F6F6FA;
+  width: 320px;
+  padding: 16px;
+  z-index: 10;
+}
+
+.payment-modal__list {
+  list-style-type: none;
+  padding: 0;
+  padding-left: 28px;
+  margin: 0;
+}
+
+.payment-modal__item {
+  position: relative;
+}
+
+.payment-modal__radio-control {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  left: -25px;
+  border-radius: 50%;
+  top: 3px;
+}
+
+.payment-modal__input[type=radio]:checked+.payment-modal__radio-control::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-image: url(../img/radio-checked-icon.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  top: -3px;
+  left: -3px;
+  border: 1px solid #FFFFFF;
+}
+
+.modal__delivery {
+  display: none;
+}
+
+.payment-modal__close-button {
+  width: 24px;
+  height: 24px;
+  background-image: url(../img/modal-close-icon.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+  background-color: transparent;
+}
+
+.payment-modal__button {
+  margin-bottom: 16px;
+}
+
+.payment-modal__button-container {
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  width: 320px;
+}
