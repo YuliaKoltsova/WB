@@ -39,13 +39,15 @@
   font-weight: 700;
   line-height: 28px;
   letter-spacing: -0.2px;
+  margin: 0;
 }
 
 .subtitle {
   font-weight: 600;
+  margin: 0;
 }
 
-.button-text {
+.subtitle-bold-text {
   font-weight: 700;
 }
 
@@ -124,10 +126,7 @@
 /* Общие стили main */
 .main__title {
   margin: 0;
-  font-size: 20px;
   margin-bottom: 13.5px;
-  letter-spacing: -0.2px;
-  line-height: 28px;
 }
 
 /* Чекбоксы */
@@ -152,6 +151,7 @@
 .goods__hidden-element {
   display: flex;
   align-items: end;
+  cursor: pointer;
 }
 
 .checkbox-element__control-mark {
@@ -201,7 +201,7 @@
 }
 
 .goods-stock {
-  margin-bottom: 32px;
+  margin-bottom: 16px;
 }
 
 .goods-stock__list {
@@ -247,8 +247,7 @@
   background-color: #FFFFFF;
   border-radius: 4px;
   left: 4px;
-  bottom: 8px;
-  font-size: 14px;
+  bottom: 4px;
   text-align: center;
   z-index: 2;
   padding: 0 2px 0 2px;
@@ -263,17 +262,15 @@
 
 .count input[type="number"] {
 	display: block;
-	height: 34px;
-	line-height: 34px;
+	height: 32px;
+	line-height: 32px;
 	width: 100%;
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
 	text-align: center;
   border: none;
-  font-size: 14px;
   font-family: inherit;
-  line-height: 20px;
 }
 
 .count input[type="number"]::-webkit-outer-spin-button,
@@ -285,6 +282,7 @@
   position: absolute;
   top: 0;
   background-color: #FFFFFF;
+  height: 32px;
 }
 
 .count__button--minus {
@@ -325,40 +323,43 @@
 
 .goods-card__price {
   display: flex;
+  align-items: center;
+  column-gap: 5px;
 }
 
 .goods-card__info-price {
-  font-weight: 700;
   margin-right: 5px;
   margin-bottom: 2px;
-  line-height: 24px;
 }
 
 .goods-card__info-old-price {
-  font-size: 13px;
   color: #A0A0A4;
   text-decoration: line-through;
-  line-height: 16px;
+  position: relative;
+}
+
+.goods-card__info-old-price::after {
+  content: '';
+  width: 100%;
+  border-top: 1px dashed #A0A0A4;
+  height: 3px;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
 }
 
 .goods-card__info-name {
   text-decoration: none;
-  font-size: 14px;
   color: #000000;
   margin-bottom: 8px;
-  line-height: 20px;
 }
 
 .goods-card__info-color {
-  font-size: 13px;
   margin-bottom: 8px;
-  line-height: 16px;
 }
 
 .goods-card__info-storage {
-  font-size: 13px;
   color: #A0A0A4;
-  line-height: 16px;
 }
 
 .goods-card__info-bottom {
@@ -374,15 +375,17 @@
   display: flex;
 }
 
+.goods-card__count {
+  align-self: center;
+}
+
 .goods-card__count-info {
-  font-size: 13px;
   color: #FF3B30;
   align-self: center;
-  line-height: 16px;
 }
 
 .card-button {
-  padding: 8px 12px 6px 12px;
+  padding: 12px;
 }
 
 .card-button__button {
@@ -391,6 +394,7 @@
   border: none;
   background-color: transparent;
   display: block;
+  cursor: pointer;
 }
 
 .card-button__button--favorite {
@@ -406,16 +410,24 @@
 }
 
 /* Раздел "Отстутствуют" */
+.goods__subtitle-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-bottom: 18.5px;
+}
+
 .goods__text-container {
   display: flex;
-  font-weight: 600;
-  line-height: 24px;
-  margin-bottom: 16px;
 }
 
 .goods__title {
   margin: 0;
   margin-right: 4px;
+}
+
+.goods__subtitle {
+  margin-right: 3px;
 }
 
 .goods-card--out-stock {
@@ -427,6 +439,10 @@
 .goods-card__all-info {
   display: flex;
   column-gap: 16px;
+}
+
+.goods-card__link {
+  display: flex;
 }
 
 .goods-card__info-bottom--out-stock {
@@ -464,28 +480,16 @@
   margin-bottom: 8px;
 }
 
-.title {
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 28px;
-  letter-spacing: -0.2px;
-  margin: 0;
-}
-
 .choose-button {
-  font-size: 16px;
+  font-size: inherit;
   font-weight: 700;
-  line-height: 24px;
+  line-height: inherit;
+  font-family: inherit;
   color: #CB11AB;
   border: none;
   background-color: transparent;
-}
-
-.subtitle {
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 24px;
-  margin: 0;
+  padding: 0;
+  cursor: pointer;
 }
 
 .delivery__point {
@@ -494,17 +498,8 @@
   margin-bottom: 16px;
 }
 
-.delivery__text {
-  font-size: 16px;
-  line-height: 24px;
-}
-
 .delivery__text--adress {
   margin-bottom: 4px;
-}
-
-.delivery__text--terms {
-  margin-bottom: 0;
 }
 
 .delivery__subtitle-container {
@@ -517,7 +512,7 @@
 }
 
 .delivery__rating {
-  padding-left: 13px;
+  padding-left: 16px;
   position: relative;
 }
 
@@ -532,11 +527,6 @@
   position: absolute;
   left: 0;
   bottom: 2px;
-}
-
-.description {
-  font-size: 13px;
-  line-height: 16px;
 }
 
 .delivery__goods {
@@ -570,15 +560,10 @@
   top: -8px;
 }
 
-.note {
-  font-size: 13px;
-  line-height: 16px;
-  position: relative;
-  margin: 0;
-}
-
 .delivery-info {
   padding-left: 38px;
+  position: relative;
+  margin: 0;
 }
 
 .delivery-info::before {
@@ -610,8 +595,6 @@
 
 .bank-card__note {
   margin: 0;
-  font-size: 13px;
-  line-height: 16px;
   color: #A0A0A4;
 }
 
@@ -644,11 +627,6 @@
   font-size: 16px;
   line-height: 24px;
   color: #A0A0A4;
-}
-
-.form__item-note {
-  font-size: 12px;
-  line-height: 14px;
 }
 
 /* Итого */
@@ -685,19 +663,12 @@
 }
 
 .checkbox-element__label--total {
-  font-size: 13px;
-  line-height: 16px;
   display: flex;
-  align-self: center;
+  align-items: center;
 }
 
 .checkbox-element__control-mark-label-total {
   margin-right: 8px;
-}
-
-.total__payment-note {
-  font-size: 13px;
-  line-height: 16px;
 }
 
 .total__payment {
@@ -713,24 +684,25 @@
   display: flex;
   width: 100%;
   min-height: 44px;
-  padding: 0 32px 5px 32px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border: 0;
   border-radius: 8px;
   background-color: #CB11AB;
-  font-size: 16px;
+  font-size: inherit;
   font-weight: 700;
-  line-height: 24px;
+  line-height: inherit;
   color: #FFFFFF;
   margin-bottom: 12px;
   cursor: pointer;
+  box-sizing: border-box;
 }
 
 .total__form-agreement-text {
   padding-left: 21px;
   position: relative;
+  margin: 0;
 }
 
 .total__form-agreement-text::before {
@@ -746,6 +718,7 @@
 .total__form-agreement-link {
   text-decoration: none;
   color: #000000;
+  margin: 0;
 }
 
 /* FOOTER */
@@ -767,8 +740,6 @@
 
 .footer__text {
   color: #FFFFFF;
-  font-size: 13px;
-  line-height: 16px;
   padding: 24px;
   padding-top: 48px;
   text-align: center;
@@ -781,8 +752,17 @@
   list-style-type: none;
   margin: 0;
   padding: 0;
-  min-height: 56px;
   background-color: #FFFFFF;
   justify-content: space-between;
+  align-items: center;
+}
+
+.nav-mobile-bottom__item {
+  min-height: 56px;
   padding: 14px 13px 14px 13px;
+  box-sizing: border-box;
+}
+
+.nav-mobile-bottom__link {
+  display: flex;
 }
