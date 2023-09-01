@@ -152,6 +152,19 @@
   cursor: pointer;
 }
 
+.hidden-element__icon {
+  fill: #A0A0A4;
+}
+
+.hidden-element__icon:hover {
+  fill: #000000;
+}
+
+.hidden-element__icon:active {
+  fill: rgba(0, 0, 0, 0.8)
+}
+
+
 .checkbox-element__control-mark {
   display: block;
   width: 22px;
@@ -283,6 +296,10 @@
   height: 32px;
 }
 
+.count__button:hover {
+  background-color: rgba(0, 0, 0, 0.20);
+}
+
 .count__button--minus {
 	left: 0;
 	bottom: 0;
@@ -393,6 +410,14 @@
   background-color: transparent;
   display: block;
   cursor: pointer;
+}
+
+.card-button__button:hover {
+  opacity: 0.7;
+}
+
+.card-button__button:active {
+  opacity: 0.5;
 }
 
 .card-button__button--favorite {
@@ -707,6 +732,14 @@
   box-sizing: border-box;
 }
 
+.button:hover {
+  background-color: #E313BF;
+}
+
+.button:active {
+  background-color: #B30F97;
+}
+
 .total__form-agreement-text {
   padding-left: 21px;
   position: relative;
@@ -724,7 +757,7 @@
 }
 
 .total__form-agreement-link {
-  text-decoration: none;
+  text-decoration-color: rgba(0, 0, 0, 0.10);
   color: #000000;
   margin: 0;
 }
@@ -781,5 +814,10 @@
   position: relative;
 }
 
+.nav-mobile-bottom__icon {
+  fill: #CCCCCC;
+}
 
-
+.nav-mobile-bottom__icon--active {
+  fill: #CB11AB;
+}
