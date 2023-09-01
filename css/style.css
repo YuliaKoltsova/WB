@@ -33,6 +33,32 @@
   color: #000000;
 }
 
+/* Шрифты на странице */
+.title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: -0.2px;
+}
+
+.subtitle {
+  font-weight: 600;
+}
+
+.button-text {
+  font-weight: 700;
+}
+
+.description-normal-text {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.description-small-text {
+  font-size: 13px;
+  line-height: 16px;
+}
+
 /* HEADER */
 .header {
   width: 100%;
@@ -626,6 +652,10 @@
 }
 
 /* Итого */
+.total {
+  margin-bottom: 16px;
+}
+
 .total__container {
   padding: 8px 16px 0 16px;
   display: flex;
