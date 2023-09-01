@@ -229,7 +229,7 @@
                                                     <span class="visually-hidden">В избранное.</span>
                                                     </button>
                                                 </div>
-                                                <div class="goods-card__button card-button">
+                                                <div class="goods-card__button card-button card-button__delete">
                                                     <button class="card-button__button card-button__button--delete" type="button">
                                                     <span class="visually-hidden">Удалить.</span>
                                                     </button>
@@ -258,7 +258,7 @@
                                                     <span class="visually-hidden">В избранное.</span>
                                                     </button>
                                                 </div>
-                                                <div class="goods-card__button card-button">
+                                                <div class="goods-card__button card-button card-button__delete">
                                                     <button class="card-button__button card-button__button--delete" type="button">
                                                     <span class="visually-hidden">Удалить.</span>
                                                     </button>
@@ -269,7 +269,7 @@
                                     <li class="goods-stock__item goods-card goods-card--out-stock">
                                         <div class="goods-card__all-info">
                                             <div class="goods-card__image">
-                                                <span class="goods-card__size description-normal-text">56/54/52...</span>
+                                                <span class="goods-card__size goods-card__size--big-text description-normal-text">56/54/52...</span>
                                                 <a class="goods-card__link" href="#">
                                                     <img class="goods-card__photo goods-card__photo--out-stock" src="img/basket-3.jpg" width="80" height="106" alt="Карандаши цветные Faber-Castell, набор 24 цвeта">
                                                 </a>
@@ -287,7 +287,7 @@
                                                     <span class="visually-hidden">В избранное.</span>
                                                     </button>
                                                 </div>
-                                                <div class="goods-card__button card-button">
+                                                <div class="goods-card__button card-button card-button__delete">
                                                     <button class="card-button__button card-button__button--delete" type="button">
                                                     <span class="visually-hidden">Удалить.</span>
                                                     </button>
@@ -384,7 +384,7 @@
                                             <label class="form__placeholder" for="tel">Телефон</label>
                                         </li>
                                         <li class="form__item">
-                                            <input class="form__input" id="taxpayer-number" type="number" name="taxpayer-number" placeholder="" required>
+                                            <input class="form__input" id="taxpayer-number" type="text" name="taxpayer-number" placeholder="" maxlength="14" required>
                                             <label class="form__placeholder" for="taxpayer-number">ИНН</label>
                                             <span class="form__item-note description-small-text">Для таможенного оформления</span>
                                         </li>
@@ -401,16 +401,16 @@
                                     </div>
                                     <table class="total__table">
                                         <tr class="total__table-row">
-                                            <td>203 товара</td>
-                                            <td class="total__second-column">2 302 048 сом</td>
+                                            <td class="total__сell">203 товара</td>
+                                            <td class="total__сell total__second-column">2 302 048 сом</td>
                                         </tr>
                                         <tr class="total__table-row">
-                                            <td>Скидка</td>
-                                            <td class="total__second-column">−200 985 сом</td>
+                                            <td class="total__сell">Скидка</td>
+                                            <td class="total__сell total__second-column">−200 985 сом</td>
                                         </tr>
                                         <tr class="total__table-row">
-                                            <td>Доставка</td>
-                                            <td class="total__second-column">Бесплатно</td>
+                                            <td class="total__сell">Доставка</td>
+                                            <td class="total__сell total__second-column total__text">Бесплатно</td>
                                         </tr>
                                     </table>
                                 </div>

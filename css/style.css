@@ -38,13 +38,15 @@
   font-size: 20px;
   font-weight: 700;
   line-height: 28px;
-  letter-spacing: -0.2px;
+  letter-spacing: -0.4px;
   margin: 0;
 }
 
 .subtitle {
   font-weight: 600;
   margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
 }
 
 .subtitle-bold-text {
@@ -89,7 +91,7 @@
   background-color: #F6F6FA;
   border-radius: 24px 24px 0 0;
   position: absolute;
-  bottom: 0;
+  bottom: -4px;
 }
 
 /* Навигация в header для mobile */
@@ -108,7 +110,7 @@
 }
 
 .nav-top__logo-image {
-  padding-top: 8px;
+  padding-top: 6px;
 }
 
 /* Навигация в header для desktop и tablet */
@@ -125,13 +127,14 @@
 .main__title {
   margin: 0;
   margin-bottom: 13.5px;
+  margin-top: -6px;
 }
 
 /* Чекбоксы */
 .goods__checkbox-all {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 16px;
+  margin-bottom: 19px;
 }
 
 .checkbox-element__label {
@@ -172,6 +175,7 @@
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 6px;
   margin: 0;
+  margin-top: 2px;
   position: relative;
   box-sizing: border-box;
 }
@@ -197,7 +201,7 @@
 
 .checkbox-card__control-mark--card {
   background-color: #FFFFFF;
-  top: 4px;
+  top: 1px;
   left: 4px;
   position: absolute;
 }
@@ -212,7 +216,11 @@
 }
 
 .goods-stock {
-  margin-bottom: 16px;
+  margin-bottom: 31px;
+}
+
+.goods-stock--out-stock {
+  margin-bottom: 17px;
 }
 
 .goods-stock__list {
@@ -224,7 +232,7 @@
 /* КАРТОЧКА ТОВАРА */
 /* Общие стили карточки товара */
 .goods-card {
-  padding: 12px 0 10px 0;
+  padding: 13px 0 10px 0;
   position: relative;
 }
 
@@ -243,7 +251,7 @@
   grid-template-columns: 80px 192px;
   grid-template-rows: auto auto;
   column-gap: 16px;
-  row-gap: 12px;
+  row-gap: 5px;
 }
 
 .goods-card__image {
@@ -261,7 +269,10 @@
   bottom: 4px;
   text-align: center;
   z-index: 2;
-  padding: 0 2px 0 2px;
+}
+
+.goods-card__size--big-text {
+  padding: 0 3px;
 }
 
 /* Количество товара */
@@ -301,7 +312,7 @@
 }
 
 .count__button--minus {
-	left: 0;
+	left: 2px;
 	bottom: 0;
 	width: 20px;
 	padding: 0;
@@ -318,7 +329,7 @@
 }
 
 .count__button--plus {
-	right: 0;
+	right: 3px;
 	bottom: 0;
 	width: 20px;
 	padding: 0;
@@ -345,6 +356,7 @@
 .goods-card__info-price {
   margin-right: 5px;
   margin-bottom: 2px;
+  letter-spacing: 0.2px;
 }
 
 .goods-card__info-old-price {
@@ -403,6 +415,10 @@
   padding: 12px;
 }
 
+.card-button__delete {
+  padding-right: 4px;
+}
+
 .card-button__button {
   width: 20px;
   height: 20px;
@@ -457,6 +473,7 @@
   display: flex;
   flex-direction: column;
   padding-bottom: 6px;
+  row-gap: 1px;
 }
 
 .goods-card__all-info {
@@ -559,7 +576,7 @@
   display: flex;
   flex-direction: column;
   row-gap: 12px;
-  margin-bottom: 24px; 
+  margin-bottom: 19px; 
 }
 
 .delivery__product-thumbnail-container {
@@ -577,16 +594,20 @@
   font-size: 10px;
   font-weight: 600;
   line-height: 18px;
-  right: -4px;
-  top: -8px;
+  right: -6px;
+  top: -5px;
 }
 
 .delivery {
   margin-bottom: 12px;
 }
 
+.delivery__title {
+  letter-spacing: -0.5px;
+}
+
 .delivery-info {
-  padding-left: 38px;
+  padding-left: 31px;
   position: relative;
   margin: 0;
 }
@@ -599,8 +620,8 @@
   background-image: url(../img/delivery-icon.svg);
   background-position: center;
   background-repeat: no-repeat;
-  left: 8px;
-  top: 5px;
+  left: 0;
+  top: 3px;
 }
 
 /* Способы оплаты */
@@ -629,7 +650,7 @@
 
 /* Получатель */
 .receiver {
-  margin-bottom: 24px;
+  margin-bottom: 4px;
 }
 
 .receiver__container {
@@ -637,7 +658,7 @@
 }
 
 .receiver__title {
-  margin-bottom: 2px;
+  margin-bottom: 9px;
 }
 
 .form__list {
@@ -650,9 +671,13 @@
 }
 
 .form__item {
-  padding: 13px 0 16px 0;
+  padding: 13px 0 18px 0;
   position: relative;
   width: 100%;
+}
+
+.form__item-note {
+  font-size: 12px;
 }
 
 .form__input {
@@ -688,13 +713,13 @@
   position: absolute;
   transition: all 200ms;
   top: 12px;
-  left: 10px;
+  left: 0;
 }
 
 .form__item input:focus + label,
 .form__item input:not(:placeholder-shown) + label{
-  top: 0;
-  left: 0;
+  top: -6px;
+  left: -2px;
   font-size: 12px; 
   line-height: 14px;
   color: #A0A0A4;
@@ -715,12 +740,20 @@
 .total__title-container {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 8px;
+  margin-bottom: 5px;
 }
 
 .total__table {
   width: 100%;
   padding: 0;
+}
+
+.total__сell {
+  padding: 0;
+}
+
+.total__text {
+  letter-spacing: -0.3px;
 }
 
 .total__second-column {
@@ -743,7 +776,7 @@
 }
 
 .total__payment {
-  margin-bottom: 24px;
+  margin-bottom: 19px;
 }
 
 .total__button-container {
