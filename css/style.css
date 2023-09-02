@@ -425,6 +425,7 @@
 	text-align: center;
   border: none;
   font-family: inherit;
+  border-radius: 8px;
 }
 
 .count input[type="number"]::-webkit-outer-spin-button,
@@ -444,7 +445,7 @@
 }
 
 .count__button--minus {
-	left: 2px;
+	left: 0;
 	bottom: 0;
 	width: 20px;
 	padding: 0;
@@ -461,7 +462,7 @@
 }
 
 .count__button--plus {
-	right: 3px;
+	right: 0;
 	bottom: 0;
 	width: 20px;
 	padding: 0;
@@ -488,6 +489,20 @@
   }
 }
 
+.goods-card__info-bottom:hover .goods-card__count-info {
+  display: block;
+}
+
+.goods-card__button {
+  @media (min-width: 1024px) {
+    display: none;
+  }
+}
+
+.goods-card__info-bottom:hover .goods-card__button {
+  display: block;
+}
+
 .goods-card__info {
   display: flex;
   flex-direction: column;
@@ -503,6 +518,11 @@
   margin-right: 5px;
   margin-bottom: 2px;
   letter-spacing: 0.2px;
+
+  @media (min-width: 1024px) {
+    margin: 0;
+    margin-bottom: 6px;
+  }
 }
 
 .goods-card__info-old-price {
@@ -531,7 +551,8 @@
   display: none;
   
   @media (min-width: 1024px) {
-    display: block;
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -616,8 +637,10 @@
   color: #FF3B30;
   align-self: center;
 
+  @media (min-width: 1024px) {
+    display: none;
+  }
 }
-
 
 .card-button {
   padding: 12px;
@@ -636,24 +659,16 @@
   cursor: pointer;
 }
 
-.card-button__button:hover {
-  opacity: 0.7;
+.card-button__button-icon {
+  fill: #000000;
 }
 
-.card-button__button:active {
-  opacity: 0.5;
+.card-button__button-icon--favorites:hover {
+  fill: #CB11AB;
 }
 
-.card-button__button--favorite {
-  background-image: url(../img/favorite-icon.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.card-button__button--delete {
-  background-image: url(../img/delete-icon.svg);
-  background-position: center;
-  background-repeat: no-repeat;
+.card-button__button-icon--delete:hover {
+  fill: #F55123;
 }
 
 /* Раздел "Отстутствуют" */
