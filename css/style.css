@@ -32,6 +32,14 @@
   line-height: 24px;
   color: #000000;
   position: relative;
+
+  @media (min-width: 1024px) {
+    width: 1024px;
+  }
+
+  @media (min-width: 1400px) {
+    width: 1400px;
+  }
 }
 
 /* Шрифты на странице */
@@ -78,6 +86,11 @@
   border: none;
   padding: 0;
   cursor: pointer;
+
+  @media (min-width: 1024px) {
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    border-radius: 8px;
+  }
 }
 
 .header__nav {
@@ -100,27 +113,112 @@
   display: flex;
   justify-content: space-between;
   padding: 14px 13px 0 13px;
+
+  @media (min-width: 1024px) {
+    padding: 16px 24px 40px 24px;
+    justify-content: start;
+  }
 }
 
 .nav-top__toggle--open {
   background-image: url(../img/menu-mobile-icon.svg);
+
+  @media (min-width: 1024px) {
+    background-image: url(../img/menu-icon.svg);
+    width:48px;
+    height: 48px;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-right: 16px;
+  }
 }
 
 .nav-top__toggle--search {
   background-image: url(../img/search-icon.svg);
+
+  @media (min-width: 1024px) {
+    display: none;
+  }
 }
 
 .nav-top__logo-image {
   padding-top: 6px;
+  margin-right: 32px;
 }
 
 /* Навигация в header для desktop и tablet */
 .nav-top__input-search {
   display: none;
+
+  @media (min-width: 1024px) {
+    display: block;
+    background-color: rgba(255, 255, 255, 0.20);
+    border-radius: 36px;
+    border: none;
+    width: 594px;
+    background-image: url(../img/search-input-icon.svg);
+    background-repeat: no-repeat;
+    background-position: right 20px center ;
+    font-family: inherit;
+    font-size: 18px;
+    line-height: 24px;
+    padding-left: 20px;
+    margin-right: 32px;
+  }
+}
+
+.nav-top__input-search::placeholder {
+  color: #FFFFFF;
+  opacity: 0.5;
+  font-family: "Segoe UI", "Arial", sans-serif;
 }
 
 .nav-top__list {
   display: none;
+
+  @media (min-width: 1024px) {
+    display: block;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    column-gap: 40px;
+  }
+}
+
+.nav__item {
+  width: 56px;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  position: relative;
+}
+
+.nav__link {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.nav__link--profile::before {
+  content: '';
+  background-image: url(../img/profile-icon.svg);
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -14px;
+}
+
+.nav__link--basket::before {
+  content: '';
+  background-image: url(../img/basket.-icon.svg);
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -14px;
 }
 
 /* MAIN */
@@ -130,6 +228,26 @@
   margin-bottom: 13.5px;
   margin-top: -6px;
   position: relative;
+}
+
+.main__form {
+  @media (min-width: 1024px) {
+    display: grid;
+    grid-template-columns: 640px 303px;
+    column-gap: 32px;
+  }
+}
+
+.main__wrapper {
+  @media (min-width: 1024px) {
+    display: flex;
+    flex-direction: column;
+    width: 640px;
+  }
+
+  @media (min-width: 1400px) {
+    width: 891px;
+  }
 }
 
 /* Чекбоксы */
@@ -169,7 +287,6 @@
   fill: rgba(0, 0, 0, 0.8)
 }
 
-
 .checkbox-element__control-mark {
   display: block;
   width: 22px;
@@ -206,6 +323,10 @@
   top: 1px;
   left: 4px;
   position: absolute;
+
+  @media (min-width: 1024px) {
+    top: 38px;
+  }
 }
 
 /* Список товаров в корзине */
@@ -254,6 +375,11 @@
   grid-template-rows: auto auto;
   column-gap: 16px;
   row-gap: 5px;
+
+  @media (min-width: 1024px) {
+    grid-template-columns: 106px 275px 100px 110px;
+    column-gap: 16px;
+  }
 }
 
 .goods-card__image {
@@ -268,9 +394,13 @@
   background-color: #FFFFFF;
   border-radius: 4px;
   left: 4px;
-  bottom: 4px;
+  bottom: 8px;
   text-align: center;
   z-index: 2;
+
+  @media (min-width: 1024px) {
+    display: none;
+  }
 }
 
 .goods-card__size--big-text {
@@ -344,6 +474,20 @@
   border-radius: 0 4px 4px 0;
 }
 
+.goods-card__count--mobile {
+  @media (min-width: 1024px) {
+    display: none;
+  }
+}
+
+.goods-card__count--desktop {
+  display: none;
+
+  @media (min-width: 1024px) {
+    display: block;
+  }
+}
+
 .goods-card__info {
   display: flex;
   flex-direction: column;
@@ -377,6 +521,25 @@
   left: 0;
 }
 
+.goods-card__price--mobile {
+  @media (min-width: 1024px) {
+    display: none;
+  }
+}
+
+.goods-card__price--desktop {
+  display: none;
+  
+  @media (min-width: 1024px) {
+    display: block;
+  }
+}
+
+.goods-card__info-container {
+  display: flex;
+  column-gap: 16px;
+}
+
 .goods-card__info-name {
   text-decoration: none;
   color: #000000;
@@ -387,13 +550,54 @@
   margin-bottom: 8px;
 }
 
+.goods-card__info-size {
+  display: none;
+
+  @media (min-width: 1024px) {
+    display: block;
+  }
+}
+
 .goods-card__info-storage {
   color: #A0A0A4;
+
+  @media (min-width: 1024px) {
+    margin-bottom: 4px;
+  }
+}
+
+.goods-card__info-company-container {
+  display: none; 
+
+  @media (min-width: 1024px) {
+    display: block;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.goods-card__info-сompany {
+  color: #A0A0A4;
+  margin-right: 6px;
+}
+
+.goods-card__info-company-button {
+  border: none;
+  background-color: transparent;
+  background-image: url(../img/info-icon.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
 }
 
 .goods-card__info-bottom {
   display: flex;
   justify-content: space-between;
+
+  @media (min-width: 1024px) {
+    flex-direction: column;;
+  }
 }
 
 .goods-card__info-bottom--left {
@@ -411,7 +615,9 @@
 .goods-card__count-info {
   color: #FF3B30;
   align-self: center;
+
 }
+
 
 .card-button {
   padding: 12px;
@@ -485,6 +691,10 @@
 
 .goods-card__link {
   display: flex;
+
+  @media (min-width: 1024px) {
+    padding-left: 33px;
+  }
 }
 
 .goods-card__info-bottom--out-stock {
@@ -626,6 +836,10 @@
   top: 3px;
 }
 
+.total__delivery-info--highight {
+  color: #0CB477;
+}
+
 /* Способы оплаты */
 .payment {
   margin-bottom: 12px;
@@ -730,6 +944,10 @@
 /* Итого */
 .total {
   margin-bottom: 16px;
+
+  @media (mun-width: 1024px) {
+    width: 255px;
+  }
 }
 
 .total__container {
@@ -1135,4 +1353,8 @@
 
 .addresses-modal__delete-icon:active {
   fill: rgba(0, 0, 0, 0.8);
+}
+
+.modal__delivery-modal--close {
+  display: none;
 }
