@@ -129,6 +129,7 @@
   margin: 0;
   margin-bottom: 13.5px;
   margin-top: -6px;
+  position: relative;
 }
 
 /* Чекбоксы */
@@ -904,7 +905,6 @@
   left: 0;
   background-color: rgba(5, 0, 10, 0.30);
   z-index: 5;
-  overflow: auto;
 }
 
 .modal--mobile {
@@ -917,11 +917,15 @@
   margin-bottom: 13px;
 }
 
-.payment-modal__container {
+.modal-container {
   background-color: #F6F6FA;
-  width: 320px;
+  width: 100%;
   padding: 16px;
   z-index: 10;
+}
+
+.modal-container--delivery {
+  padding-top: 18px;
 }
 
 .payment-modal__list {
@@ -935,17 +939,20 @@
   position: relative;
 }
 
-.payment-modal__radio-control {
+.radio-control {
   position: absolute;
   width: 16px;
   height: 16px;
   border: 1px solid rgba(0, 0, 0, 0.2);
-  left: -25px;
   border-radius: 50%;
+}
+
+.payment-modal__radio-control {
+  left: -25px;
   top: 3px;
 }
 
-.payment-modal__input[type=radio]:checked+.payment-modal__radio-control::after {
+.modal-input__input[type=radio]:checked+.radio-control::after {
   content: '';
   position: absolute;
   width: 20px;
@@ -962,22 +969,22 @@
   display: none;
 }
 
-.payment-modal__close-button {
+.close-button {
   width: 24px;
   height: 24px;
   border: none;
   background-color: transparent;
 }
 
-.payment-modal__icon {
+.close-button__icon {
   fill: #A0A0A4;
 }
 
-.payment-modal__icon:hover {
+.close-button__icon:hover {
   fill: #000000;
 }
 
-.payment-modal__icon:active {
+.close-button__icon:active {
   fill: rgba(0, 0, 0, 0.8);
 }
 
@@ -985,15 +992,147 @@
   margin-bottom: 16px;
 }
 
-.payment-modal__button-container {
+.button-container {
   justify-content: space-between;
   align-items: center;
   overflow: hidden;
   position: fixed;
   bottom: 0;
   width: 288px;
+  z-index: 10;
 }
 
 .modal__payment-modal--close {
   display: none;
+}
+
+/* Модальное окно "Способ доставки" */
+.type-delivery {
+  margin-bottom: 30px;
+}
+
+.delivery-modal__subtitle {
+  font-weight: 700;
+}
+
+.delivery-modal__subtitle-container {
+  margin-bottom: 10px;
+}
+
+.type-delivery__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 144px 144px;
+  column-gap: 8px;
+  text-align: center;
+}
+
+.delivery-modal__title-container {
+  margin-bottom: 22px;
+}
+
+.type-delivery__item {
+  position: relative;
+}
+
+.delivery-modal__big-radio-control {
+  width: 140px;
+  min-height: 38px;
+  border: 2px solid rgba(203, 17, 171, 0.15);
+  position: absolute;
+  border-radius: 20px;
+  right: 0;
+  top: -7px;
+}
+
+.type-delivery__input[type=radio]:checked+.delivery-modal__big-radio-control::before {
+  content: '';
+  width: 140px;
+  min-height: 38px;
+  border: 2px solid #CB11AB;
+  position: absolute;
+  border-radius: 20px;
+  right: -1px;
+  top: -2px;
+}
+
+.addresses-modal__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+}
+
+.addresses-modal__item {
+  display: grid;
+  grid-template-columns: 264px 20px;
+  column-gap: 8px;
+}
+
+.addresses-modal__info {
+  display: flex;
+  flex-direction: column;
+  padding-left: 28px;
+}
+
+.addresses-modal__address {
+  letter-spacing: -0.1px;
+}
+
+.addresses-modal__item {
+  position: relative;
+}
+
+.addresses-modal__radio-control {
+  top: 6px;
+}
+
+.addresses-modal__input[type=radio]:checked+.radio-control::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-image: url(../img/radio-checked-icon.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  top: -3px;
+  left: -3px;
+  border: 1px solid #FFFFFF;
+}
+
+.addresses-modal__description {
+  color: #A0A0A4;
+}
+
+.addresses-modal__rating {
+  padding-left: 16px;
+  position: relative;
+}
+
+.addresses-modal__rating::before {
+  content: '';
+  width: 12px;
+  height: 12px;
+  background-image: url(../img/rating-icon.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 0;
+  top: 5px;
+}
+
+.addresses-modal__delete-icon {
+  fill: #A0A0A4;
+}
+
+.addresses-modal__delete-icon:hover {
+  fill:#000000;
+}
+
+.addresses-modal__delete-icon:active {
+  fill: rgba(0, 0, 0, 0.8);
 }

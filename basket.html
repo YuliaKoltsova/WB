@@ -506,8 +506,8 @@
         </div>
         <div class="modals">
             <div class="modal modal--mobile modal__payment-modal modal__payment-modal--close payment-modal">
-                <div class="payment-modal__container">
-                    <div class="title-container">
+                <div class="payment-modal__container modal-container">
+                    <div class="payment-modal__title-container title-container">
                         <h2 class="payment-modal__title title">Способ оплаты</h2>
                         <button class="payment-modal__close-button">
                             <svg class="payment-modal__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -517,37 +517,37 @@
                         </button>
                     </div>
                     <div class="payment-modal__content">
-                        <form class="payment-modal__form">
+                        <form class="payment-modal__form" action="#" method="post">
                             <ul class="payment-modal__list">
                                 <li class="payment-modal__item">
                                     <label class="payment-modal__label">
                                         <img class="payment-modal__bank-card-image" src="img/bank-card-mir.svg" width="32" height="24px">
-                                        <input class="payment-modal__input visually-hidden" type="radio" name="bank-card-number" value="1234 56•• •••• 1234 МИР">
-                                        <span class="payment-modal__radio-control"></span>
+                                        <input class="payment-modal__input visually-hidden modal-input" type="radio" name="bank-card-number" value="1234 56•• •••• 1234 МИР">
+                                        <span class="payment-modal__radio-control radio-control"></span>
                                         1234 56•• •••• 1234
                                     </label>
                                 </li>
                                 <li class="payment-modal__item">
                                     <label class="payment-modal__label">
                                         <img class="payment-modal__bank-card-image" src="img/bank-card-visa.svg" width="32" height="24px">
-                                        <input class="payment-modal__input visually-hidden" type="radio" name="bank-card-number" value="1234 56•• •••• 1234 VISA">
-                                        <span class="payment-modal__radio-control"></span>
+                                        <input class="payment-modal__input visually-hidden modal-input" type="radio" name="bank-card-number" value="1234 56•• •••• 1234 VISA">
+                                        <span class="payment-modal__radio-control radio-control"></span>
                                         1234 56•• •••• 1234
                                     </label>
                                 </li>
                                 <li class="payment-modal__item">
                                     <label class="payment-modal__label">
                                         <img class="payment-modal__bank-card-image" src="img/bank-card-mastercard.svg" width="32" height="24px">
-                                        <input class="payment-modal__input visually-hidden" type="radio" name="bank-card-number" value="1234 56•• •••• 1234 MASTERCARD">
-                                        <span class="payment-modal__radio-control"></span>
+                                        <input class="payment-modal__input visually-hidden modal-input" type="radio" name="bank-card-number" value="1234 56•• •••• 1234 MASTERCARD">
+                                        <span class="payment-modal__radio-control radio-control"></span>
                                         1234 56•• •••• 1234
                                     </label>
                                 </li>
                                 <li class="payment-modal__item">
                                     <label class="payment-modal__label">
                                         <img class="payment-modal__bank-card-image" src="img/bank-card-maestro.svg" width="32" height="24px">
-                                        <input class="payment-modal__input visually-hidden" type="radio" name="bank-card-number" value="1234 56•• •••• 1234 MAESTRO">
-                                        <span class="payment-modal__radio-control"></span>
+                                        <input class="payment-modal__input visually-hidden modal-input" type="radio" name="bank-card-number" value="1234 56•• •••• 1234 MAESTRO">
+                                        <span class="payment-modal__radio-control radio-control"></span>
                                         1234 56•• •••• 1234
                                     </label>
                                 </li>
@@ -559,8 +559,113 @@
                     </div>
                 </div>
             </div>
-            <div class="modal modal__delivery">
-
+            <div class="modal modal--mobile modal__delivery-modal delivery-modal">
+                <div class="delivery-modal__container modal-container modal-container--delivery">
+                    <div class="delivery-modal__title-container title-container">
+                        <h2 class="delivery-modal__title title">Способ доставки</h2>
+                        <button class="delivery-modal__close-button close-button">
+                            <svg class="close-button__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.92888 17.6569C4.53836 18.0474 4.53836 18.6806 4.92888 19.0711C5.3194 19.4616 5.95257 19.4616 6.34309 19.0711L12 13.4143L17.6568 19.0711C18.0473 19.4616 18.6805 19.4616 19.071 19.0711C19.4615 18.6806 19.4615 18.0474 19.071 17.6569L13.4142 12L19.071 6.3432C19.4615 5.95268 19.4615 5.31951 19.071 4.92899C18.6805 4.53846 18.0473 4.53846 17.6568 4.92899L12 10.5858L6.3431 4.92899C5.95258 4.53846 5.31941 4.53846 4.92889 4.92899C4.53837 5.31951 4.53837 5.95268 4.92889 6.3432L10.5857 12L4.92888 17.6569Z"/>
+                            </svg>
+                            <span class="visually-hidden">Закрыть окно.</span>
+                        </button>
+                    </div>
+                    <form class="delivery-modal__form" action="#" method="post">
+                        <div class="delivery-modal__type-delivery type-delivery">
+                            <ul class="type-delivery__list">
+                                <li class="type-delivery__item">
+                                    <label class="type-delivery__label">
+                                        <input class="type-delivery__input visually-hidden" type="radio" name="type-delivery" value="В пункт выдачи" checked>
+                                        <span class="delivery-modal__big-radio-control"></span>
+                                        В пункт выдачи
+                                    </label>
+                                </li>
+                                <li class="type-delivery__item">
+                                    <label class="type-delivery__label">
+                                        <input class="type-delivery__input visually-hidden" type="radio" name="type-delivery" value="Курьером">
+                                        <span class="delivery-modal__big-radio-control"></span>
+                                        Курьером
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="delivery-modal__subtitle-container">
+                            <span class="delivery-modal__subtitle description-small-text">Мои адреса</span>
+                        </div>
+                        <div class="delivery-modal__addresses addresses-modal">
+                            <ul class="addresses-modal__list">
+                                <li class="addresses-modal__item">
+                                    <div class="addresses-modal__radio">
+                                        <label class="addresses-modal__label">
+                                            <input class="addresses-modal__input visually-hidden modal-input" type="radio" name="bank-card-number" value="1234 56•• •••• 1234 МИР" checked>
+                                            <span class="addresses-modal__radio-control radio-control"></span>
+                                            <div class="addresses-modal__info">
+                                                <span class="addresses-modal__address">г. Бишкек, микрорайон Джал, улица Ахунбаева Исы, д. 67/1</span>
+                                                <div class="addresses-modal__rating">
+                                                    <span class="addresses-modal__description description-small-text">Пункт выдачи</span>
+                                                </div>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="addresses-modal__delete">
+                                        <svg class="addresses-modal__delete-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2.5 5C2.5 4.72386 2.72386 4.5 3 4.5H17C17.2761 4.5 17.5 4.72386 17.5 5C17.5 5.27614 17.2761 5.5 17 5.5H3C2.72386 5.5 2.5 5.27614 2.5 5Z"/>
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.4584 4.5H16.5059L15.6411 15.6926C15.5405 16.9947 14.4546 18 13.1486 18H6.84639C5.54299 18 4.45829 16.9986 4.35435 15.6994L3.4584 4.5ZM4.5416 5.5L5.35117 15.6196C5.41353 16.3992 6.06435 17 6.84639 17H13.1486C13.9322 17 14.5837 16.3968 14.6441 15.6155L15.4256 5.5H4.5416Z"/>
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M13 5.5H7V3.46875C7 2.65758 7.65758 2 8.46875 2H11.5312C12.3424 2 13 2.65758 13 3.46875V5.5ZM8.46875 3C8.20987 3 8 3.20987 8 3.46875V4.5H12V3.46875C12 3.20987 11.7901 3 11.5312 3H8.46875Z"/>
+                                        </svg>
+                                    </div>
+                                </li>
+                                <li class="addresses-modal__item">
+                                    <div class="addresses-modal__radio">
+                                        <label class="addresses-modal__label">
+                                            <input class="addresses-modal__input visually-hidden modal-input" type="radio" name="bank-card-number" value="1234 56•• •••• 1234 МИР">
+                                            <span class="addresses-modal__radio-control radio-control"></span>
+                                            <div class="addresses-modal__info">
+                                                <span class="addresses-modal__address">г. Бишкек, микрорайон Джал, улица Ахунбаева Исы, д. 67/1</span>
+                                                <div class="addresses-modal__rating">
+                                                    <span class="addresses-modal__rating-number description-small-text">4.99</span>
+                                                    <span class="addresses-modal__description description-small-text">Пункт выдачи</span>
+                                                </div>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="addresses-modal__delete">
+                                        <svg class="addresses-modal__delete-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2.5 5C2.5 4.72386 2.72386 4.5 3 4.5H17C17.2761 4.5 17.5 4.72386 17.5 5C17.5 5.27614 17.2761 5.5 17 5.5H3C2.72386 5.5 2.5 5.27614 2.5 5Z"/>
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.4584 4.5H16.5059L15.6411 15.6926C15.5405 16.9947 14.4546 18 13.1486 18H6.84639C5.54299 18 4.45829 16.9986 4.35435 15.6994L3.4584 4.5ZM4.5416 5.5L5.35117 15.6196C5.41353 16.3992 6.06435 17 6.84639 17H13.1486C13.9322 17 14.5837 16.3968 14.6441 15.6155L15.4256 5.5H4.5416Z"/>
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M13 5.5H7V3.46875C7 2.65758 7.65758 2 8.46875 2H11.5312C12.3424 2 13 2.65758 13 3.46875V5.5ZM8.46875 3C8.20987 3 8 3.20987 8 3.46875V4.5H12V3.46875C12 3.20987 11.7901 3 11.5312 3H8.46875Z"/>
+                                        </svg>
+                                    </div>
+                                </li>
+                                <li class="addresses-modal__item">
+                                    <div class="addresses-modal__radio">
+                                        <label class="addresses-modal__label">
+                                            <input class="addresses-modal__input visually-hidden modal-input" type="radio" name="bank-card-number" value="1234 56•• •••• 1234 МИР">
+                                            <span class="addresses-modal__radio-control radio-control"></span>
+                                            <div class="addresses-modal__info">
+                                                <span class="addresses-modal__address">г. Бишкек, улица Табышалиева, д. 57</span>
+                                                <div class="addresses-modal__rating">
+                                                    <span class="addresses-modal__rating-number description-small-text">4.99</span>
+                                                    <span class="addresses-modal__description description-small-text">Пункт выдачи</span>
+                                                </div>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="addresses-modal__delete">
+                                        <svg class="addresses-modal__delete-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2.5 5C2.5 4.72386 2.72386 4.5 3 4.5H17C17.2761 4.5 17.5 4.72386 17.5 5C17.5 5.27614 17.2761 5.5 17 5.5H3C2.72386 5.5 2.5 5.27614 2.5 5Z"/>
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.4584 4.5H16.5059L15.6411 15.6926C15.5405 16.9947 14.4546 18 13.1486 18H6.84639C5.54299 18 4.45829 16.9986 4.35435 15.6994L3.4584 4.5ZM4.5416 5.5L5.35117 15.6196C5.41353 16.3992 6.06435 17 6.84639 17H13.1486C13.9322 17 14.5837 16.3968 14.6441 15.6155L15.4256 5.5H4.5416Z"/>
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M13 5.5H7V3.46875C7 2.65758 7.65758 2 8.46875 2H11.5312C12.3424 2 13 2.65758 13 3.46875V5.5ZM8.46875 3C8.20987 3 8 3.20987 8 3.46875V4.5H12V3.46875C12 3.20987 11.7901 3 11.5312 3H8.46875Z"/>
+                                        </svg>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="addresses-modal__button-container button-container">
+                            <button class="addresses-modal__button button">Выбрать</button>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </body>
