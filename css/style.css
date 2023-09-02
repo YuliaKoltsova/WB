@@ -233,7 +233,7 @@
 .main__form {
   @media (min-width: 1024px) {
     display: grid;
-    grid-template-columns: 640px 303px;
+    grid-template-columns: 656px 303px;
     column-gap: 32px;
   }
 }
@@ -242,7 +242,7 @@
   @media (min-width: 1024px) {
     display: flex;
     flex-direction: column;
-    width: 640px;
+    width: 664px;
   }
 
   @media (min-width: 1400px) {
@@ -332,18 +332,22 @@
 /* Список товаров в корзине */
 .goods {
   padding: 0 16px 0 16px;
+
+  @media (min-width: 1024px) {
+    padding: 0 24px 0 24px;
+  }
 }
 
 .goods__container {
   margin-bottom: 16px;
+  
+  @media (min-width: 1024px) {
+    width: 640px;
+  }
 }
 
 .goods-stock {
   margin-bottom: 31px;
-}
-
-.goods-stock--out-stock {
-  margin-bottom: 17px;
 }
 
 .goods-stock__list {
@@ -493,13 +497,13 @@
   display: block;
 }
 
-.goods-card__button {
+.goods-card__button--stock {
   @media (min-width: 1024px) {
     display: none;
   }
 }
 
-.goods-card__info-bottom:hover .goods-card__button {
+.goods-card__info-bottom:hover .goods-card__button--stock {
   display: block;
 }
 
@@ -553,6 +557,7 @@
   @media (min-width: 1024px) {
     display: flex;
     flex-direction: column;
+    align-items: end;
   }
 }
 
@@ -562,9 +567,15 @@
 }
 
 .goods-card__info-name {
+  display: block;
   text-decoration: none;
   color: #000000;
   margin-bottom: 8px;
+  display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    max-height: 40px;
 }
 
 .goods-card__info-color {
@@ -610,6 +621,7 @@
   background-repeat: no-repeat;
   width: 20px;
   height: 20px;
+  cursor: pointer;
 }
 
 .goods-card__info-bottom {
@@ -697,6 +709,13 @@
   flex-direction: column;
   padding-bottom: 6px;
   row-gap: 1px;
+
+  @media (min-width: 1024px) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+    row-gap: 16px;
+  }
 }
 
 .goods-card__all-info {
@@ -709,6 +728,12 @@
 
   @media (min-width: 1024px) {
     padding-left: 33px;
+  }
+}
+
+.goods-card__link--out-stock {
+  @media (min-width: 1024px) {
+    padding-left: 0;
   }
 }
 
