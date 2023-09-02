@@ -491,23 +491,23 @@
                                     <h2 class="receiver__title title">Получатель</h2>
                                     <div class="receiver__form from">
                                         <ul class="form__list">
-                                            <li class="form__item">
+                                            <li class="form__item form__item--name">
                                                 <input class="form__input" id="name" type="text" name="name" placeholder="" required>
                                                 <label class="form__placeholder" for="name">Имя</label>
                                             </li>
-                                            <li class="form__item">
+                                            <li class="form__item form__item--name">
                                                 <input class="form__input" id="surname" type="text" name="surname" placeholder="" required>
                                                 <label class="form__placeholder" for="surname">Фамилия</label>
                                             </li>
-                                            <li class="form__item">
+                                            <li class="form__item form__item--info">
                                                 <input class="form__input" id="email" type="email" name="email" placeholder="" required>
                                                 <label class="form__placeholder" for="email">Электронная почта</label>
                                             </li>
-                                            <li class="form__item">
+                                            <li class="form__item form__item--info">
                                                 <input class="form__input" id="tel" type="tel" name="phone" placeholder="" value="+7 988 123-45-67" required>
                                                 <label class="form__placeholder" for="tel">Телефон</label>
                                             </li>
-                                            <li class="form__item">
+                                            <li class="form__item form__item--info">
                                                 <input class="form__input" id="taxpayer-number" type="text" name="taxpayer-number" placeholder="" maxlength="14" required>
                                                 <label class="form__placeholder" for="taxpayer-number">ИНН</label>
                                                 <span class="form__item-note description-small-text">Для таможенного оформления</span>
@@ -539,9 +539,34 @@
                                         </tr>
                                     </table>
                                 </div>
+                                <div class="total__delivery">
+                                    <div class="total__delivery-container total__box">
+                                        <span class="total__subtitle subtitle-bold-text">Доставка в пункт выдачи</span>
+                                        <button class="total__icon-button icon-button">
+                                            <span class="visually-hidden">Изменить.</span>
+                                        </button>
+                                    </div>
+                                    <div class="total__delivery-description total__box">
+                                        <span class="total__delivery-text description-small-text">Бишкек, улица Ахматбека Суюмбаева, 12/1</span>
+                                        <span class="total__delivery-dates description-small-text">5–8 фев</span>
+                                    </div>
+                                </div>
                                 <div class="total__delivery-info total__wrapper">
                                     <p class="total__delivery-info delivery-info description-small-text">Обратная доставка товаров на склад при отказе — 
                                         <span class="total__delivery-info--highight">бесплатно</span></p>
+                                </div>
+                                <div class="total__bank-card bank-card">
+                                    <div class="total__bank-card-container total__box">
+                                        <span class="total__subtitle subtitle-bold-text">Оплата картой</span>
+                                        <button class="total__icon-button icon-button">
+                                            <span class="visually-hidden">Изменить.</span>
+                                        </button>
+                                    </div>
+                                    <div class="bank-card__info bank-card__info--total description-small-text">
+                                        <img class="bank-card__image" src="img/bank-card-mir.svg" width="32" height="24" alt="Логотип карты МИР.">
+                                        <span class="bank-card__number">1234 56•• •••• 1234</span>
+                                        <span class="bank-card__date">01/30</span>
+                                    </div>
                                 </div>
                                 <div class="total__payment total__wrapper">
                                     <div class="total__payment-checkbox checkbox-element">
@@ -553,15 +578,15 @@
                                     </div>
                                     <span class="total__payment-note description-small-text">Спишем оплату с карты при получении</span>
                                 </div>
-                            </div>
-                            <div class="total__button-container">
-                                <button class="total__button button" type="submit">Заказать</button>
-                                <div class="total__form-agreement">
-                                    <p class="total__form-agreement-text description-small-text">Соглашаюсь с 
-                                        <a class="total__form-agreement-link" href="#">правилами пользования торговой площадкой</a> 
-                                        и 
-                                        <a class="total__form-agreement-link" href="#">возврата</a>
-                                    </p>
+                                <div class="total__button-container">
+                                    <button class="total__button button" type="submit">Заказать</button>
+                                    <div class="total__form-agreement">
+                                        <p class="total__form-agreement-text description-small-text">Соглашаюсь с 
+                                            <a class="total__form-agreement-link" href="#">правилами пользования торговой площадкой</a> 
+                                            и 
+                                            <a class="total__form-agreement-link" href="#">возврата</a>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </section>
