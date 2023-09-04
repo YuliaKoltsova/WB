@@ -488,6 +488,10 @@
   opacity: 0.2;
 }
 
+.count__button--plus-none {
+  opacity: 0.2;
+}
+
 .count__button--plus {
 	right: 0;
 	bottom: 0;
