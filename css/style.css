@@ -836,6 +836,10 @@
   margin-bottom: 4px;
 }
 
+.delivery__text--pop-over {
+  position: relative;
+}
+
 .delivery__delivery-term {
   display: flex;
   flex-direction: column;
@@ -915,6 +919,10 @@
   letter-spacing: -0.5px;
 }
 
+.delivery__wrapper {
+  position: relative;
+}
+
 .delivery-info {
   padding-left: 31px;
   position: relative;
@@ -934,8 +942,12 @@
   margin-top: -11px;
 }
 
-.total__delivery-info--highight {
+.delivery-info__highight {
   color: #0CB477;
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 /* Способы оплаты */
@@ -1548,7 +1560,7 @@
   position: absolute;
   z-index: 15;
   box-sizing: border-box;
-  display: none;
+  /* display: none; */
 }
 
 .pop-over--price {
@@ -1581,7 +1593,8 @@
 }
 
 .goods-card__info-company-button:hover+.pop-over,
-.goods-card__info-old-price:hover+.pop-over {
+.goods-card__info-old-price:hover+.pop-over,
+.delivery-info__highight:hover+.pop-over {
   display: block;
 }
 
@@ -1597,4 +1610,23 @@
 
 .pop-over__table {
   width: 257px;
+}
+
+.pop-over--delivery {
+  left: 3px;
+  top: 35px;
+
+  @media(min-width: 1024px) {
+    left: 231px;
+    top: 21px;
+  }
+}
+
+.pop-over--delivery-total {
+  left: 4px;
+  top: 54px;
+  @media (min-width: 1024px){
+    left: -12px;
+    top: 54px;
+  }
 }
