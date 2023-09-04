@@ -1,5 +1,7 @@
 import "./checkbox.js";
-import "./payment.js"
 
 // работа инпута с кнопками в карточке товара
 import "./count-buttons.js"
+
+// подсчет суммы заказа и работа кнопки "заказать"
+import "./payment.js"
