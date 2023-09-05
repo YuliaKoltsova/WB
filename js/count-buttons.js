@@ -69,6 +69,8 @@ const calculationCardPrices = (evt) => {
   const prices = document.querySelectorAll(".goods-card__info-price");
   const total = document.querySelector(".total__total");
   calculatedTotal(prices, total);
+  const totalPriceMainPart = document.querySelector(".goods__all-info--total-price");
+  calculatedTotal(prices, totalPriceMainPart);
   // Сумма без скидки
   const priceWithoutSale = document.querySelectorAll(".goods-card__info-old-price");
   const totalWithoutSale = document.querySelector(".total__сell--without-discount");
@@ -81,7 +83,9 @@ const calculationCardPrices = (evt) => {
   // Расчет и отображение количества товара
   const totalCount = document.querySelector(".total__сell--count");
   const allCount = document.querySelectorAll(".count__input");
- calculatedTotalCount(allCount, totalCount);
+  calculatedTotalCount(allCount, totalCount);
+  const allCountMainPart = document.querySelector(".goods__all-info--count");
+  calculatedTotalCount(allCount, allCountMainPart);
 }
 
 // Добавляем слушатель(клик) на список карточек товаров в корзине (те, что есть в наличии) и реализуем работу кнопок + и - (значение в инпуте >= 1)
