@@ -35,4 +35,18 @@ const removeCheckboxAll = () => {
   }
 }
 
+// Если чекбокс отмечен, ему добавляется класс element-checked
+const addClass = () => {
+  for (let i = 0; i < checkboxCards.length; i++) { 
+    checkboxCards[i].addEventListener("click", (evt) => {
+      if (checkboxCards[i].checked) {
+        evt.target.closest(".checkbox-element__label").classList.add("element-checked");
+      } else if (!checkboxCards[i].checked) {
+        evt.target.closest(".checkbox-element__label").classList.remove("element-checked");
+      }
+    })
+  }
+}
+
 removeCheckboxAll();
+addClass();

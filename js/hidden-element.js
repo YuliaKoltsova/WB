@@ -6,18 +6,23 @@ const goodsList = document.querySelector(".goods-stock__stock");
 const goodsOutStockList = document.querySelector(".goods-stock__out-stock");
 const checkboxAll = document.querySelector(".checkbox-element__label");
 const goodsInfo = document.querySelector(".goods__all-info");
+const checkboxWrapper = document.querySelector(".goods__checkbox-all");
 
 // Скрыть
 const hidden = (object, button) => {
   object.style.display = "none";
   object.classList.add("hidden-block");
   button.style.backgroundImage = "url('img/arrow-icon-open.svg')";
+  button.style.marginBottom = "18px";
+  checkboxWrapper.style.borderBottom = "2px solid rgba(0, 0, 0, 0.1)";
 } 
 // Показать
 const show = (object, button) => {
   object.style.display = "block";
   object.classList.remove("hidden-block");
   button.style.backgroundImage = "url('img/arrow-icon.svg')";
+  button.style.marginBottom = "0";
+  checkboxWrapper.style.borderBottom = "none";
 }
 
 // Скрытие-показ в блоке с товарами в наличии

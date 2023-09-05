@@ -29,14 +29,14 @@ const calculatedTotal = (array, element) => {
   element.textContent = `${(sumOfNumbers).toLocaleString()} com`;
 }
 
-// Функция отображения сумм в блоке Итого
+// Функция отображения количества товаров в блоке Итого
 const calculatedTotalCount = (array, element) => {
-  // Добавляем в массив все цены
+  // Добавляем в массив количество каждого товара
   const arrayPrices = new Array(); 
   for (let i = 0; i < array.length; i++) {
     arrayPrices.push(Number(array[i].value.replace(/[^0-9]/g,"")));
   }
-  // Забираем каждый второй элемент массива, т.к. в разметке дублируется цена для mobile и desktop/tablet
+  // Забираем каждый второй элемент массива, т.к. в разметке дублируется блоки с количеством для mobile и desktop/tablet
   const sortedArrayPrices = arrayPrices.filter((item, index) => index % 2);
   // Суммируем
   const sumOfNumbers = sortedArrayPrices.reduce((acc, number) => acc + number, 0);
@@ -50,7 +50,10 @@ const calculatedTotalCount = (array, element) => {
 // Изменение стоимости товаров в карточках товаров и в полях Итого
 const calculationCardPrices = (evt) => {
   // Количество товаров
-  const count = Number(evt.target.parentElement.querySelector("input").value);
+  let count;
+  if (evt.target.classList.contains("count__button")) {
+    count = Number(evt.target.parentElement.querySelector("input").value);
+  }
   // Цена каждого товара
   const priceOneItem = PriceGoods[evt.target.closest(".goods-stock__item").id];
   const oldPriceOnetem = OldPriceGoods[evt.target.closest(".goods-stock__item").id];
@@ -91,7 +94,7 @@ const calculationCardPrices = (evt) => {
 // Добавляем слушатель(клик) на список карточек товаров в корзине (те, что есть в наличии) и реализуем работу кнопок + и - (значение в инпуте >= 1)
 goodsCards.addEventListener("click", (evt) => {
   let countGoods;
-  if (evt.target.closest(".goods-card__info-bottom").querySelector(".goods-card__count-info") !== null) {
+  if (evt.target.closest(".goods-stock__item").querySelector(".goods-card__count-info") !== null) {
     countGoods = document.querySelector(".goods-card__count-info").textContent.replace(/[^0-9]/g,"");
   } else {
     countGoods = 100000;
@@ -117,5 +120,3 @@ goodsCards.addEventListener("click", (evt) => {
   }
   calculationCardPrices(evt);
 });
-
-

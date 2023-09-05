@@ -286,6 +286,7 @@
 
 .goods__all-info {
   display: none;
+  position: absolute;
 }
 
 .goods__hidden-element {
