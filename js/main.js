@@ -7,3 +7,5 @@ import "./count-buttons.js"
 import "./payment.js"
 
 import "./hidden-element.js"
+
+import "./modals.js"
