@@ -32,44 +32,21 @@ const calculationCardPrices = (evt) => {
   oldPrice.forEach(element => {
     element.textContent = `${(Math.round(count * oldPriceOnetem)).toLocaleString()} com`;
   });
+  // Находим все элементы с суммой в карточках товаров
+  const all = document.querySelectorAll(".goods-card__info-price");
+  // Добавляем в массив все цены
+  const arrayPrices = new Array(); 
+  for (let i = 0; i < all.length; i++) {
+    arrayPrices.push(Number(all[i].textContent.replace(/[^0-9]/g,"")));
+  }
+  // Забираем каждый второй элемент массива, т.к. в разметке дублируется цена для mobile и desktop/tablet
+  const sortedArrayPrices = arrayPrices.filter((item, index) => index % 2);
+  // Суммируем
+  const sumOfNumbers = sortedArrayPrices.reduce((acc, number) => acc + number, 0);
+  const total = document.querySelector(".total__total")
+  total.textContent = `${(sumOfNumbers).toLocaleString()} com`;
+  console.log(sumOfNumbers)
 }
-
-// // Cделать массив только из чисел из полученного NodeList
-// const getArray = (list, array) => {
-//   list.forEach (element => {
-//     array.push(Number(element.textContent.replace(/[^0-9]/g,"")));
-//   })
-// }
-
-// // Сложить все элементы массива
-// const summArray = (array) => {
-//   let s = 0;
-//   for (let i = 0; i < array.length; i++){
-//     s += array[i]
-//   }
-//   return s
-// }
-
-// const getSumm = (list) => {
-//   // Создаем пустой массив
-//   let arrayNumber = new Array();
-//   // Добавляем в пустой массив только числа
-//   getArray(list, arrayNumber);
-//   // Складываем все числа массива
-//   const summ = summArray(arrayNumber);
-//   return summ;
-// }
-
-// // Изменение стоимости в поле Итого
-// const calculationTotalPrice = (evt) => {
-//   const total = document.querySelector(".total__total");
-//   const allPrices = document.querySelectorAll(".goods-card__info-price--for-total");
-//   console.log(getSumm(allPrices))
-//   total.textContent = getSumm(allPrices);
-
-// }
-
-
 
 // Добавляем слушатель(клик) на список карточек товаров в корзине (те, что есть в наличии) и реализуем работу кнопок + и - (значение в инпуте >= 1)
 goodsCards.addEventListener("click", (evt) => {
@@ -100,3 +77,5 @@ goodsCards.addEventListener("click", (evt) => {
   }
   calculationCardPrices(evt);
 });
+
+
