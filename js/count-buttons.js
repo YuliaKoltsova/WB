@@ -69,10 +69,16 @@ const calculationCardPrices = (evt) => {
 
 // }
 
-const countGoods = document.querySelector(".goods-card__count-info").textContent.replace(/[^0-9]/g,"");
+
 
 // Добавляем слушатель(клик) на список карточек товаров в корзине (те, что есть в наличии) и реализуем работу кнопок + и - (значение в инпуте >= 1)
 goodsCards.addEventListener("click", (evt) => {
+  let countGoods;
+  if (evt.target.closest(".goods-card__info-bottom").querySelector(".goods-card__count-info") !== null) {
+    countGoods = document.querySelector(".goods-card__count-info").textContent.replace(/[^0-9]/g,"");
+  } else {
+    countGoods = 100000;
+  }
   // Если нажали + и количество меньше чем в остатке(countGoods), то:
   if (evt.target.classList.contains("count__button--plus") && evt.target.parentElement.querySelector("input").value < countGoods) {
     // +1
@@ -92,4 +98,5 @@ goodsCards.addEventListener("click", (evt) => {
       evt.target.classList.add("count__button--minus-none");
     }
   }
+  calculationCardPrices(evt);
 });
