@@ -925,7 +925,7 @@
   letter-spacing: -0.5px;
 }
 
-.delivery__wrapper {
+.delivery-wrapper {
   position: relative;
 }
 
@@ -933,6 +933,7 @@
   padding-left: 31px;
   position: relative;
   margin: 0;
+  display: block;
 }
 
 .delivery-info::before {
@@ -1257,6 +1258,10 @@
   min-width: 88px;
   position: relative;
   margin-bottom: 56px;
+
+  @media(min-width: 1024px) {
+    margin-bottom: 0;
+  }
 }
 
 .footer::before {
@@ -1339,12 +1344,12 @@
   margin: 0 auto;
   box-sizing: border-box;
   width: 320px;
-  height: 100%;
+  min-height: 100%;
   padding: 16px;;
 
   @media(min-width: 1024px) {
     margin: auto;
-    height: 408px;
+    min-height: 408px;
     padding: 16px 24px 24px 24px;
     border-radius: 16px;
   }
@@ -1367,7 +1372,7 @@
 .payment-modal__form {
   @media(min-width: 1024px) {
     display: grid;
-    grid-template-rows: 283px 68px;
+    grid-template-rows: 283px 44px;
   }
 }
 
@@ -1388,6 +1393,7 @@
   height: 15px;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .payment-modal__radio-control {
@@ -1579,7 +1585,6 @@
 
 .addresses-modal__radio-control {
   top: 6px;
-  cursor: pointer;
 }
 
 .addresses-modal__input[type=radio]:checked+.radio-control::after {
@@ -1631,6 +1636,7 @@
 
 .addresses-modal__list--point {
   display: block;
+  margin-bottom: 10px;
 }
 
 .addresses-modal__list--delivery {
