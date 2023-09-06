@@ -54,9 +54,9 @@
                                         </label>
                                     </div>
                                     <span class="goods__all-info subtitle">
-                                        <span class="goods__all-info--count">266 товаров</span> 
+                                        <span class="goods__all-info--count">203 товаров</span> 
                                         · 
-                                        <span class="goods__all-info--total-price">2 100 569 сом</span>
+                                        <span class="goods__all-info--total-price">2 101 063 сом</span>
                                     </span>
                                     <div class="goods__hidden-element goods__hidden-element--stock hidden-element">
                                         <span class="visually-hidden">Скрыть.</span>
@@ -594,7 +594,7 @@
                                 <div class="total__bank-card bank-card">
                                     <div class="total__bank-card-container total__box">
                                         <span class="total__subtitle subtitle-bold-text">Оплата картой</span>
-                                        <button class="total__icon-button icon-button" type="button">
+                                        <button class="total__icon-button total__icon-button--payment icon-button" type="button">
                                             <span class="visually-hidden">Изменить.</span>
                                         </button>
                                     </div>
@@ -696,8 +696,8 @@
                 <div class="payment-modal__container modal-container modal-container--payment">
                     <div class="payment-modal__title-container title-container">
                         <h2 class="payment-modal__title title">Способ оплаты</h2>
-                        <button class="payment-modal__close-button">
-                            <svg class="payment-modal__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <button class="payment-modal__close-button close-button">
+                            <svg class="close-button__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M4.92888 17.6569C4.53836 18.0474 4.53836 18.6806 4.92888 19.0711C5.3194 19.4616 5.95257 19.4616 6.34309 19.0711L12 13.4143L17.6568 19.0711C18.0473 19.4616 18.6805 19.4616 19.071 19.0711C19.4615 18.6806 19.4615 18.0474 19.071 17.6569L13.4142 12L19.071 6.3432C19.4615 5.95268 19.4615 5.31951 19.071 4.92899C18.6805 4.53846 18.0473 4.53846 17.6568 4.92899L12 10.5858L6.3431 4.92899C5.95258 4.53846 5.31941 4.53846 4.92889 4.92899C4.53837 5.31951 4.53837 5.95268 4.92889 6.3432L10.5857 12L4.92888 17.6569Z"/>
                             </svg>
                             <span class="visually-hidden">Закрыть окно.</span>
@@ -709,7 +709,7 @@
                                 <li class="payment-modal__item">
                                     <label class="payment-modal__label">
                                         <img class="payment-modal__bank-card-image" src="img/bank-card-mir.svg" width="32" height="24px">
-                                        <input class="payment-modal__input visually-hidden modal-input" type="radio" name="bank-card-number" value="1234 56•• •••• 1234 МИР">
+                                        <input class="payment-modal__input visually-hidden modal-input__input" type="radio" name="bank-card-number" value="1234 56•• •••• 1234 МИР" checked>
                                         <span class="payment-modal__radio-control radio-control"></span>
                                         1234 56•• •••• 1234
                                     </label>
@@ -717,7 +717,7 @@
                                 <li class="payment-modal__item">
                                     <label class="payment-modal__label">
                                         <img class="payment-modal__bank-card-image" src="img/bank-card-visa.svg" width="32" height="24px">
-                                        <input class="payment-modal__input visually-hidden modal-input" type="radio" name="bank-card-number" value="1234 56•• •••• 1234 VISA">
+                                        <input class="payment-modal__input visually-hidden modal-input__input" type="radio" name="bank-card-number" value="1234 56•• •••• 1234 VISA">
                                         <span class="payment-modal__radio-control radio-control"></span>
                                         1234 56•• •••• 1234
                                     </label>
@@ -725,7 +725,7 @@
                                 <li class="payment-modal__item">
                                     <label class="payment-modal__label">
                                         <img class="payment-modal__bank-card-image" src="img/bank-card-mastercard.svg" width="32" height="24px">
-                                        <input class="payment-modal__input visually-hidden modal-input" type="radio" name="bank-card-number" value="1234 56•• •••• 1234 MASTERCARD">
+                                        <input class="payment-modal__input visually-hidden modal-input__input" type="radio" name="bank-card-number" value="1234 56•• •••• 1234 MASTERCARD">
                                         <span class="payment-modal__radio-control radio-control"></span>
                                         1234 56•• •••• 1234
                                     </label>
@@ -733,14 +733,14 @@
                                 <li class="payment-modal__item">
                                     <label class="payment-modal__label">
                                         <img class="payment-modal__bank-card-image" src="img/bank-card-maestro.svg" width="32" height="24px">
-                                        <input class="payment-modal__input visually-hidden modal-input" type="radio" name="bank-card-number" value="1234 56•• •••• 1234 MAESTRO">
+                                        <input class="payment-modal__input visually-hidden modal-input__input" type="radio" name="bank-card-number" value="1234 56•• •••• 1234 MAESTRO">
                                         <span class="payment-modal__radio-control radio-control"></span>
                                         1234 56•• •••• 1234
                                     </label>
                                 </li>
                             </ul>
                             <div class="payment-modal__button-container">
-                                <button class="payment-modal__button button">Выбрать</button>
+                                <button class="payment-modal__button button" type="button">Выбрать</button>
                             </div>
                         </form>
                     </div>

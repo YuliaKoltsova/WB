@@ -1338,30 +1338,36 @@
   z-index: 10;
   margin: 0 auto;
   box-sizing: border-box;
+  width: 320px;
+  height: 100%;
+  padding: 16px;;
 
   @media(min-width: 1024px) {
     margin: auto;
+    height: 408px;
+    padding: 16px 24px 24px 24px;
+    border-radius: 16px;
   }
 }
 
 .modal-container--payment {
-  width: 293px;
-  height: 100%;
-  padding: 16px;
-
+  @media(min-width: 1024px) {
+    width: 400px;
+  }
 }
 
 .modal-container--delivery {
   padding-top: 18px;
-  padding: 16px;
-  width: 320px;
-  height: 100%;
 
   @media (min-width: 1024px) {
     width: 500px;
-    height: 408px;
-    padding: 16px 24px 24px 24px;
+  }
+}
 
+.payment-modal__form {
+  @media(min-width: 1024px) {
+    display: grid;
+    grid-template-rows: 283px 68px;
   }
 }
 
@@ -1378,8 +1384,8 @@
 
 .radio-control {
   position: absolute;
-  width: 16px;
-  height: 16px;
+  width: 15px;
+  height: 15px;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 50%;
 }
@@ -1424,6 +1430,10 @@
 
 .payment-modal__button {
   margin-bottom: 16px;
+
+  @media (min-width: 1024px) {
+    margin: 0;
+  }
 }
 
 /* Кнопка "Выбрать" в модальном окне */
@@ -1437,6 +1447,12 @@
   @media (min-width: 1024px) {
     position: static;
     width: 456px;
+  }
+}
+
+.payment-modal__button-container {
+  @media(min-width: 1024px) {
+    width: 356px;
   }
 }
 

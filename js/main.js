@@ -9,8 +9,10 @@ import "./payment.js"
 import "./hidden-element.js"
 
 // Показ/скрытие мод.окон + изменение контента мод.окнаы
-import {openModalDelivery, closeModalDelivery, changeAdresses} from "./modals.js";
+import {openModalDelivery, closeModalDelivery, changeAdresses, openModalPayment,closeModalPayment} from "./modals.js";
 
 openModalDelivery();
 closeModalDelivery();
 changeAdresses();
+openModalPayment();
+closeModalPayment();
