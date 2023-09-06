@@ -47,7 +47,7 @@
                                 <h3 class="visually-hidden">В наличии</h3>
                                 <div class="goods__checkbox-all checkbox">
                                     <div class="checkbox__element checkbox-element">
-                                        <label class="checkbox-element__label checkbox-element__label--all">
+                                        <label class="goods__сheckbox-container checkbox-element__label checkbox-element__label--all">
                                             <input class="checkbox-element__input checkbox-element__input--all visually-hidden" type="checkbox" name="check-all">
                                             <span class="checkbox-element__control-mark checkbox-element__control-mark-all"></span>
                                             Выбрать все
@@ -367,7 +367,7 @@
                                                 <div class="goods-card__image">
                                                     <a class="goods-card__link goods-card__link--out-stock" href="#">
                                                         <picture>
-                                                            <source media="(min-width: 1024px)" srcset="img/basket-1-big.jpg" width="72" heigth="96">
+                                                            <source media="(min-width: 1024px)" srcset="img/basket-2-big.jpg" width="72" heigth="96">
                                                         <img class="goods-card__photo goods-card__photo--out-stock" src="img/basket-2.jpg" width="80" height="106" alt="Силиконовый чехол картхолдер.">
                                                         </picture>
                                                     </a>
@@ -408,7 +408,7 @@
                                                     <span class="goods-card__size goods-card__size--big-text description-normal-text">56/54/52...</span>
                                                     <a class="goods-card__link goods-card__link--out-stock" href="#">
                                                         <picture>
-                                                            <source media="(min-width: 1024px)" srcset="img/basket-1-big.jpg" width="72" heigth="96">
+                                                            <source media="(min-width: 1024px)" srcset="img/basket-3-big.jpg" width="72" heigth="96">
                                                             <img class="goods-card__photo goods-card__photo--out-stock" src="img/basket-3.jpg" width="80" height="106" alt="Карандаши цветные Faber-Castell, набор 24 цвeта">
                                                         </picture>
                                                     </a>
@@ -693,7 +693,7 @@
         </div>
         <div class="modals">
             <div class="modal modal--mobile modal__payment-modal modal__payment-modal--close payment-modal">
-                <div class="payment-modal__container modal-container">
+                <div class="payment-modal__container modal-container modal-container--payment">
                     <div class="payment-modal__title-container title-container">
                         <h2 class="payment-modal__title title">Способ оплаты</h2>
                         <button class="payment-modal__close-button">
@@ -784,7 +784,7 @@
                                 <li class="addresses-modal__item">
                                     <div class="addresses-modal__radio">
                                         <label class="addresses-modal__label">
-                                            <input class="addresses-modal__input visually-hidden modal-input" type="radio" name="bank-card-number" value="1234 56•• •••• 1234 МИР" checked>
+                                            <input class="addresses-modal__input visually-hidden modal-input" type="radio" name="adress-point" value="г. Бишкек, микрорайон Джал, улица Ахунбаева Исы, д. 67/1" checked>
                                             <span class="addresses-modal__radio-control radio-control"></span>
                                             <div class="addresses-modal__info">
                                                 <span class="addresses-modal__address">г. Бишкек, микрорайон Джал, улица Ахунбаева Исы, д. 67/1</span>
@@ -805,7 +805,7 @@
                                 <li class="addresses-modal__item">
                                     <div class="addresses-modal__radio">
                                         <label class="addresses-modal__label">
-                                            <input class="addresses-modal__input visually-hidden modal-input" type="radio" name="bank-card-number" value="1234 56•• •••• 1234 МИР">
+                                            <input class="addresses-modal__input visually-hidden modal-input" type="radio" name="adress-point" value="г. Бишкек, микрорайон Джал, улица Ахунбаева Исы, д. 67/1">
                                             <span class="addresses-modal__radio-control radio-control"></span>
                                             <div class="addresses-modal__info">
                                                 <span class="addresses-modal__address">г. Бишкек, микрорайон Джал, улица Ахунбаева Исы, д. 67/1</span>
@@ -827,7 +827,7 @@
                                 <li class="addresses-modal__item">
                                     <div class="addresses-modal__radio">
                                         <label class="addresses-modal__label">
-                                            <input class="addresses-modal__input visually-hidden modal-input" type="radio" name="bank-card-number" value="1234 56•• •••• 1234 МИР">
+                                            <input class="addresses-modal__input visually-hidden modal-input" type="radio" name="adress-point" value="г. Бишкек, улица Табышалиева, д. 57">
                                             <span class="addresses-modal__radio-control radio-control"></span>
                                             <div class="addresses-modal__info">
                                                 <span class="addresses-modal__address">г. Бишкек, улица Табышалиева, д. 57</span>
@@ -848,16 +848,13 @@
                                 </li>
                             </ul>
                             <ul class="addresses-modal__list addresses-modal__list--delivery">
-                                <li class="addresses-modal__item">
+                                <li class="addresses-modal__item addresses-modal__item--delivery">
                                     <div class="addresses-modal__radio">
                                         <label class="addresses-modal__label">
-                                            <input class="addresses-modal__input visually-hidden modal-input" type="radio" name="bank-card-number" value="1234 56•• •••• 1234 МИР" checked>
+                                            <input class="addresses-modal__input visually-hidden modal-input" type="radio" name="adress-delivery" value="Бишкек, улица Табышалиева, 57" checked>
                                             <span class="addresses-modal__radio-control radio-control"></span>
                                             <div class="addresses-modal__info">
-                                                <span class="addresses-modal__address">г. Бишкек, микрорайон Джал, улица Ахунбаева Исы, д. 67/1</span>
-                                                <div class="addresses-modal__rating">
-                                                    <span class="addresses-modal__description description-small-text">Пункт выдачи</span>
-                                                </div>
+                                                <span class="addresses-modal__address">Бишкек, улица Табышалиева, 57</span>
                                             </div>
                                         </label>
                                     </div>
@@ -869,17 +866,13 @@
                                         </svg>
                                     </div>
                                 </li>
-                                <li class="addresses-modal__item">
+                                <li class="addresses-modal__item addresses-modal__item--delivery">
                                     <div class="addresses-modal__radio">
                                         <label class="addresses-modal__label">
-                                            <input class="addresses-modal__input visually-hidden modal-input" type="radio" name="bank-card-number" value="1234 56•• •••• 1234 МИР">
+                                            <input class="addresses-modal__input visually-hidden modal-input" type="radio" name="adress-delivery" value="Бишкек, улица Жукеева-Пудовкина, 77/1">
                                             <span class="addresses-modal__radio-control radio-control"></span>
                                             <div class="addresses-modal__info">
-                                                <span class="addresses-modal__address">г. Бишкек, микрорайон Джал, улица Ахунбаева Исы, д. 67/1</span>
-                                                <div class="addresses-modal__rating">
-                                                    <span class="addresses-modal__rating-number description-small-text">4.99</span>
-                                                    <span class="addresses-modal__description description-small-text">Пункт выдачи</span>
-                                                </div>
+                                                <span class="addresses-modal__address">Бишкек, улица Жукеева-Пудовкина, 77/1</span>
                                             </div>
                                         </label>
                                     </div>
@@ -891,17 +884,13 @@
                                         </svg>
                                     </div>
                                 </li>
-                                <li class="addresses-modal__item">
+                                <li class="addresses-modal__item addresses-modal__item--delivery">
                                     <div class="addresses-modal__radio">
                                         <label class="addresses-modal__label">
-                                            <input class="addresses-modal__input visually-hidden modal-input" type="radio" name="bank-card-number" value="1234 56•• •••• 1234 МИР">
+                                            <input class="addresses-modal__input visually-hidden modal-input" type="radio" name="adress-delivery" value="Бишкек, микрорайон Джал, улица Ахунбаева Исы, 67/1">
                                             <span class="addresses-modal__radio-control radio-control"></span>
                                             <div class="addresses-modal__info">
-                                                <span class="addresses-modal__address">г. Бишкек, улица Табышалиева, д. 57</span>
-                                                <div class="addresses-modal__rating">
-                                                    <span class="addresses-modal__rating-number description-small-text">4.99</span>
-                                                    <span class="addresses-modal__description description-small-text">Пункт выдачи</span>
-                                                </div>
+                                                <span class="addresses-modal__address">Бишкек, микрорайон Джал, улица Ахунбаева Исы, 67/1</span>
                                             </div>
                                         </label>
                                     </div>
@@ -915,7 +904,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="addresses-modal__button-container button-container">
+                        <div class="addresses-modal__button-container">
                             <button class="addresses-modal__button button" type="button">Выбрать</button>
                         </div>
                     </div>
