@@ -1,5 +1,5 @@
 // Работа инпута с кнопками с количеством в карточке товара
-const goodsCards = document.querySelector(".goods-stock");
+const goodsCardsButtons = document.querySelectorAll(".count__button");
 
 // Цены на единицу товара со скидкой
 const PriceGoods = {
@@ -52,15 +52,15 @@ const calculationCardPrices = (evt) => {
   // Количество товаров
   let count;
   if (evt.target.classList.contains("count__button")) {
-    count = Number(evt.target.parentElement.querySelector("input").value);
+      count = Number(evt.target.parentElement.querySelector(".count__input").value);
   }
-  // Цена каждого товара
+  // Цена каждого товара (из объектов с ценами(имит.данных с сервера))
   const priceOneItem = PriceGoods[evt.target.closest(".goods-stock__item").id];
   const oldPriceOnetem = OldPriceGoods[evt.target.closest(".goods-stock__item").id];
-  // Стоимость на карточке товара
+  // Находим все элементы со стоимостью в карточке товара, с которой взаимодейтсвуем(изменяем количество)
   const price = evt.target.closest(".goods-stock__item").querySelectorAll(".goods-card__info-price");
   const oldPrice = evt.target.closest(".goods-stock__item").querySelectorAll(".goods-card__info-old-price");
-    // Стоимость товаров в зависимости от выбранного количества
+  // Для всех элементов со стоимостью товара(карточки, с которой взаимодействуем): количество * стоимость 1шт товара
   price.forEach(element => {
     element.textContent = `${(Math.round(count * priceOneItem)).toLocaleString()} com`;
   });
@@ -69,8 +69,8 @@ const calculationCardPrices = (evt) => {
   });
 
   // Сумма со скидкой
-  const prices = document.querySelectorAll(".goods-card__info-price");
-  const total = document.querySelector(".total__total");
+  const prices = document.querySelectorAll(".goods-card__info-price"); // все элементы с ценами со скидкой во всех карточках товаров
+  const total = document.querySelector(".total__total"); //элемент в блоке Итого, куда записываем стоимость всех товаров в корзине
   calculatedTotal(prices, total);
   const totalPriceMainPart = document.querySelector(".goods__all-info--total-price");
   calculatedTotal(prices, totalPriceMainPart);
@@ -91,32 +91,37 @@ const calculationCardPrices = (evt) => {
   calculatedTotalCount(allCount, allCountMainPart);
 }
 
-// Добавляем слушатель(клик) на список карточек товаров в корзине (те, что есть в наличии) и реализуем работу кнопок + и - (значение в инпуте >= 1)
-goodsCards.addEventListener("click", (evt) => {
-  let countGoods;
-  if (evt.target.closest(".goods-stock__item").querySelector(".goods-card__count-info") !== null) {
-    countGoods = document.querySelector(".goods-card__count-info").textContent.replace(/[^0-9]/g,"");
-  } else {
-    countGoods = 100000;
+// Работа кнопок + и - в карточках товара
+const buttonOperation = () => {
+  for (let i = 0; i < goodsCardsButtons.length; i++) {
+    goodsCardsButtons[i].addEventListener("click", (evt) => {
+      let countGoods; //Создаем переменную для количества товара в остатке
+      if (evt.target.closest(".goods-stock__item").querySelector(".goods-card__count-info") !== null) { //Если у выбранного элемента ЕСТЬ поле в разметке с остатком товара на складе, то:
+        countGoods = document.querySelector(".goods-card__count-info").textContent.replace(/[^0-9]/g,""); //Количество товара в остатке равно числовому значению указанному в поле с остатком
+      } else { // если у выбранного элемента НЕТ в разметке поля с остатком, то количество товара в остатке 100000(столько единиц товара явно не закажут)
+        countGoods = 100000; 
+      }
+      // Если нажали + и количество меньше чем в остатке(countGoods), то:
+      if (evt.target.classList.contains("count__button--plus") && evt.target.parentElement.querySelector("input").value < countGoods) {
+        ++evt.target.parentElement.querySelector("input").value; // +1
+        evt.target.parentElement.querySelector(".count__button--minus").classList.remove("count__button--minus-none"); // кнопку - делаем доступной 
+        // Если количество равно остатку, то:
+        if (evt.target.parentElement.querySelector("input").value == countGoods) {
+            evt.target.classList.add("count__button--plus-none"); // блокируем кнопку +
+        }
+      }
+      // Если нажали - и количество больше чем 1, то:
+      else if (evt.target.classList.contains("count__button--minus") && evt.target.parentElement.querySelector("input").value > 1) {
+        --evt.target.parentElement.querySelector("input").value; // -1
+        evt.target.parentElement.querySelector(".count__button--plus").classList.remove("count__button--plus-none"); //разблокируем кнопку -
+        // если количество меньше, либо равно 1, то:
+        if (evt.target.parentElement.querySelector("input").value <= 1) {
+          evt.target.classList.add("count__button--minus-none"); //блокируем кнопку -
+        }
+      }
+      calculationCardPrices(evt);
+    });
   }
-  // Если нажали + и количество меньше чем в остатке(countGoods), то:
-  if (evt.target.classList.contains("count__button--plus") && evt.target.parentElement.querySelector("input").value < countGoods) {
-    // +1
-    ++evt.target.parentElement.querySelector("input").value;
-    // кнопку - делаем доступной 
-    evt.target.parentElement.querySelector(".count__button--minus").classList.remove("count__button--minus-none");
-    if (evt.target.parentElement.querySelector("input").value == countGoods) {
-        evt.target.classList.add("count__button--plus-none");
-    }
-  }
-  // Если нажали - и количество больше чем 1, то
-  else if (evt.target.classList.contains("count__button--minus") && evt.target.parentElement.querySelector("input").value > 1) {
-    // -1
-    --evt.target.parentElement.querySelector("input").value;
-    evt.target.parentElement.querySelector(".count__button--plus").classList.remove("count__button--plus-none");
-    if (evt.target.parentElement.querySelector("input").value <= 1) {
-      evt.target.classList.add("count__button--minus-none");
-    }
-  }
-  calculationCardPrices(evt);
-});
+}
+
+export {buttonOperation};
