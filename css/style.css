@@ -957,6 +957,10 @@
   cursor: pointer;
 }
 
+.delivery__product-thumbnail-count--none {
+  display: none;
+}
+
 /* Способы оплаты */
 .payment {
   margin-bottom: 12px;
@@ -1049,7 +1053,6 @@
 .form__item input {
   background-color: #FFFFFF;
   box-sizing: border-box;
-  color: #000;
   font-size: inherit;
   line-height: inherit; 
   height: 24px;
@@ -1074,6 +1077,25 @@
   font-size: 12px; 
   line-height: 14px;
   color: #A0A0A4;
+}
+
+/* валидация формы */
+.form__item {
+  position: relative;
+}
+
+.error input{
+  border-bottom: 1px solid #F55123;
+  color: #F55123;
+}
+
+.error-text {
+  color: #F55123;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-size: 12px;
+  line-height: 14px;
 }
 
 /* Итого */

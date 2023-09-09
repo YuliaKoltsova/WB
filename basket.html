@@ -474,6 +474,7 @@
                                             <span class="delivery__subtitle subtitle">5—6 февраля</span>
                                             <div class="delivery__goods">
                                                 <div class="delivery__product-thumbnail-container" id="1">
+                                                    <span class="delivery__product-thumbnail-count product-thumbnail-count delivery__product-thumbnail-count--none">1</span>
                                                     <img class="delivery__product-thumbnail" src="img/basket-1-min.jpg" width="41" height="56" alt="Футболка UZcotton мужская.">
                                                 </div>
                                                 <div class="delivery__product-thumbnail-container" id="2" >
@@ -528,23 +529,23 @@
                                     <div class="receiver__form from">
                                         <ul class="form__list">
                                             <li class="form__item form__item--name">
-                                                <input class="form__input" id="name" type="text" name="name" placeholder="" required>
+                                                <input class="form__input form__input--name" id="name" type="text" name="name" placeholder="" required>
                                                 <label class="form__placeholder" for="name">Имя</label>
                                             </li>
-                                            <li class="form__item form__item--name">
-                                                <input class="form__input" id="surname" type="text" name="surname" placeholder="" required>
+                                            <li class="form__item form__item--surname">
+                                                <input class="form__input form__input--surname" id="surname" type="text" name="surname" placeholder="" required>
                                                 <label class="form__placeholder" for="surname">Фамилия</label>
                                             </li>
                                             <li class="form__item form__item--info">
-                                                <input class="form__input" id="email" type="email" name="email" placeholder="" required>
+                                                <input class="form__input form__input--email" id="email" type="email" name="email" placeholder="" required>
                                                 <label class="form__placeholder" for="email">Электронная почта</label>
                                             </li>
                                             <li class="form__item form__item--info">
-                                                <input class="form__input" id="tel" type="tel" name="phone" placeholder="" value="+7 988 123-45-67" required>
+                                                <input class="form__input form__input--phone" id="tel" type="tel" name="phone" placeholder="" maxlength="30" required>
                                                 <label class="form__placeholder" for="tel">Телефон</label>
                                             </li>
                                             <li class="form__item form__item--info">
-                                                <input class="form__input" id="taxpayer-number" type="text" name="taxpayer-number" placeholder="" maxlength="14" required>
+                                                <input class="form__input form__input--taxpayer-number" id="taxpayer-number" type="text" name="taxpayer-number" placeholder="" maxlength="14" required>
                                                 <label class="form__placeholder" for="taxpayer-number">ИНН</label>
                                                 <span class="form__item-note description-small-text">Для таможенного оформления</span>
                                             </li>

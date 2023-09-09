@@ -10,6 +10,9 @@ import {openModalDelivery, closeModalDelivery, changeAdresses, openModalPayment,
 // работа инпута с кнопками в карточке товара
 import { buttonOperation } from "./count-buttons.js";
 
+//Валидация формы
+import "./validate.js"
+
 openModalDelivery();
 closeModalDelivery();
 changeAdresses();
