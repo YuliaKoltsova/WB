@@ -48,7 +48,7 @@
                                 <div class="goods__checkbox-all checkbox">
                                     <div class="checkbox__element checkbox-element">
                                         <label class="goods__сheckbox-container checkbox-element__label checkbox-element__label--all">
-                                            <input class="checkbox-element__input checkbox-element__input--all visually-hidden" type="checkbox" name="check-all">
+                                            <input class="checkbox-element__input checkbox-element__input--all visually-hidden" type="checkbox" name="check-all" checked>
                                             <span class="checkbox-element__control-mark checkbox-element__control-mark-all"></span>
                                             Выбрать все
                                         </label>
@@ -68,7 +68,7 @@
                                             <div class="goods-card__image">
                                                 <div class="goods-card__checkbox checkbox-element">
                                                     <label class="checkbox-element__label">
-                                                        <input class="checkbox-element__input checkbox-element__input--card visually-hidden" type="checkbox" name="choose-all">
+                                                        <input class="checkbox-element__input checkbox-element__input--card visually-hidden" type="checkbox" name="choose-card" checked>
                                                         <span class="checkbox-element__control-mark checkbox-card__control-mark--card"></span>
                                                         <span class="visually-hidden">Выбрать.</span>
                                                     </label>
@@ -102,13 +102,13 @@
                                                 </div>
                                             </div>
                                             <div class="goods-card__count goods-card__count--mobile count">
-                                                <button class="count__button count__button--minus count__button--minus-none"  type="button"></button>
+                                                <button class="count__button count__button--minus count__button--minus-none" type="button"></button>
                                                 <input class="count__input description-normal-text" type="number" min="1" value="1">
                                                 <button class="count__button count__button--plus" type="button"></button>
                                             </div>
                                             <div class="goods-card__info-bottom">
                                                 <div class="goods-card__count goods-card__count--desktop count">
-                                                    <button class="count__button count__button--minus count__button--minus-none"  type="button"></button>
+                                                    <button class="count__button count__button--minus count__button--minus-none" type="button"></button>
                                                     <input class="count__input description-normal-text" type="number" min="1" value="1">
                                                     <button class="count__button count__button--plus" type="button"></button>
                                                 </div>
@@ -143,7 +143,7 @@
                                             <div class="goods-card__image">
                                                 <div class="goods-card__checkbox checkbox-element">
                                                     <label class="checkbox-element__label">
-                                                        <input class=" checkbox-element__input checkbox-element__input--card visually-hidden" type="checkbox" name="choose-all">
+                                                        <input class=" checkbox-element__input checkbox-element__input--card visually-hidden" type="checkbox" name="choose-card" checked>
                                                         <span class=" checkbox-element__control-mark checkbox-card__control-mark--card"></span>
                                                         <span class="visually-hidden">Выбрать.</span>
                                                     </label>
@@ -244,7 +244,7 @@
                                             <div class="goods-card__image">
                                                 <div class="goods-card__checkbox checkbox-element">
                                                     <label class="checkbox-element__label">
-                                                        <input class=" checkbox-element__input checkbox-element__input--card visually-hidden" type="checkbox" name="choose-all">
+                                                        <input class=" checkbox-element__input checkbox-element__input--card visually-hidden" type="checkbox" name="choose-card" checked>
                                                         <span class=" checkbox-element__control-mark checkbox-card__control-mark--card"></span>
                                                         <span class="visually-hidden">Выбрать.</span>
                                                     </label>
@@ -473,12 +473,14 @@
                                         <div class="delivery__delivery-term delivery__subtitle-container">
                                             <span class="delivery__subtitle subtitle">5—6 февраля</span>
                                             <div class="delivery__goods">
-                                                <img class="delivery__product-thumbnail" src="img/basket-1-min.jpg" width="41" height="56" alt="Футболка UZcotton мужская.">
-                                                <div class="delivery__product-thumbnail-container">
+                                                <div class="delivery__product-thumbnail-container" id="1">
+                                                    <img class="delivery__product-thumbnail" src="img/basket-1-min.jpg" width="41" height="56" alt="Футболка UZcotton мужская.">
+                                                </div>
+                                                <div class="delivery__product-thumbnail-container" id="2" >
                                                     <span class="delivery__product-thumbnail-count product-thumbnail-count">184</span>
                                                     <img class="delivery__product-thumbnail" src="img/basket-2-min.jpg" width="41" height="56" alt="Силиконовый чехол картхолдер.">
                                                 </div>
-                                                <div class="delivery__product-thumbnail-container">
+                                                <div class="delivery__product-thumbnail-container" id="3">
                                                     <span class="delivery__product-thumbnail-count product-thumbnail-count">2</span>
                                                     <img class="delivery__product-thumbnail" src="img/basket-3-min.jpg" width="41" height="56" alt="Карандаши цветные Faber-Castell, набор 24 цвета.">
                                                 </div>
