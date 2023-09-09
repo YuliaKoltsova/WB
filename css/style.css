@@ -1024,13 +1024,32 @@
   @media (min-width: 1024px) {
     width: 283px;
   }
+
+  @media (min-width: 1400px) {
+    width: 338px;
+  }
+}
+
+.form__item--surname {
+  @media (min-width: 1024px) {
+    width: 283px;
+  }
+
+  @media (min-width: 1400px) {
+    width: 338px;
+  }
 }
 
 .form__item--info {
   @media (min-width: 1024px) {
     width: 180.5px;
   }
+
+  @media (min-width: 1400px) {
+    width: 217.3px;
+  }
 }
+
 .form__item-note {
   font-size: 12px;
 }
