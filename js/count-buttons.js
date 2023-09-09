@@ -32,14 +32,27 @@ const calculatedTotal = (array, element) => {
 // Функция отображения количества товаров в блоке Итого
 const calculatedTotalCount = (array, element) => {
   // Добавляем в массив количество каждого товара
-  const arrayPrices = new Array(); 
+  const arrayCounts = new Array(); 
   for (let i = 0; i < array.length; i++) {
-    arrayPrices.push(Number(array[i].value.replace(/[^0-9]/g,"")));
+    arrayCounts.push(Number(array[i].value.replace(/[^0-9]/g,"")));
+    console.log(arrayCounts);
   }
   // Забираем каждый второй элемент массива, т.к. в разметке дублируется блоки с количеством для mobile и desktop/tablet
-  const sortedArrayPrices = arrayPrices.filter((item, index) => index % 2);
+  let sortedArrayCounts = new Array;
+  const getSortedArrayCounts = () => {
+    if (document.documentElement.clientWidth >= 1024) { //т.к. счетчики в разметке для mobile и desktop/tablet разные, то для размера экрана от 1024 берем каждый второй элемент массива(1,3,5,7 и тд), а для экранов меньше (0,2,4,6 и тд)
+      sortedArrayCounts = arrayCounts.filter((item, index) => index % 2);
+    } else {
+      for (let i = 0; i <arrayCounts.length; i += 2) {
+        sortedArrayCounts.push(arrayCounts[i]);
+      }
+    }
+    console.log(sortedArrayCounts);
+    return sortedArrayCounts;
+  }
+  getSortedArrayCounts();
   // Суммируем
-  const sumOfNumbers = sortedArrayPrices.reduce((acc, number) => acc + number, 0);
+  const sumOfNumbers = sortedArrayCounts.reduce((acc, number) => acc + number, 0);
   if (sumOfNumbers > 1) {
     element.textContent = `${(sumOfNumbers).toLocaleString()} товара`;
   } else {
