@@ -68,7 +68,6 @@ const calculationCardPrices = (evt) => {
           }
         }
       }
-      
   }
   // Цена каждого товара (из объектов с ценами(имит.данных с сервера))
   const priceOneItem = PriceGoods[evt.target.closest(".goods-stock__item").id];
