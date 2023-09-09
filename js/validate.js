@@ -80,3 +80,8 @@ phoneInput.addEventListener("change", (evt) => {
 taxpayerNumberInput.addEventListener("change", (evt) => {
   validInput(taxpayerNumberInput, isTaxpayerNumberValid, "Проверьте ИНН");
 });
+
+// Запрет на ввод букв
+phoneInput.addEventListener("keyup", (evt) => {
+  phoneInput.value = phoneInput.value.replace(/[^\d]/g,'');
+})
