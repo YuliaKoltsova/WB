@@ -541,11 +541,11 @@
                                                 <label class="form__placeholder" for="email">Электронная почта</label>
                                             </li>
                                             <li class="form__item form__item--info">
-                                                <input class="form__input form__input--phone" id="tel" type="tel" name="phone" placeholder="" maxlength="30" required>
+                                                <input class="form__input form__input--phone" onkeyup="this.value = this.value.replace(/[^\d]/g,'');" id="tel" type="tel" name="phone" placeholder="" maxlength="30" required>
                                                 <label class="form__placeholder" for="tel">Телефон</label>
                                             </li>
                                             <li class="form__item form__item--info">
-                                                <input class="form__input form__input--taxpayer-number" id="taxpayer-number" type="text" name="taxpayer-number" placeholder="" maxlength="14" required>
+                                                <input class="form__input form__input--taxpayer-number" onkeyup="this.value = this.value.replace(/[^\d]/g,'');" id="taxpayer-number" type="text" name="taxpayer-number" placeholder="" maxlength="14" required >
                                                 <label class="form__placeholder" for="taxpayer-number">ИНН</label>
                                                 <span class="form__item-note description-small-text">Для таможенного оформления</span>
                                             </li>
