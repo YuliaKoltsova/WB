@@ -42,6 +42,14 @@
   }
 }
 
+/* Убрать крестик у поля поиска в шапке страницы */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance:none;
+} 
+
 /* Шрифты на странице */
 .title {
   font-size: 20px;
@@ -139,12 +147,31 @@
   }
 }
 
+.nav-top__toggle--open:hover,
+.nav-top__toggle--search:hover {
+  opacity: 0.8;
+}
+
+.nav-top__toggle--open:active,
+.nav-top__toggle--search:active {
+  opacity: 0.5;
+}
+
 .nav-top__toggle--search {
   background-image: url(../img/search-icon.svg);
 
   @media (min-width: 1024px) {
     display: none;
   }
+}
+
+
+.nav-top__logo:hover {
+  opacity: 0.8;
+}
+
+.nav-top__logo:active {
+  opacity: 0.5;
 }
 
 .nav-top__logo-image {
@@ -181,6 +208,14 @@
   color: #FFFFFF;
   opacity: 0.5;
   font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.nav-top__input-search:hover {
+  opacity: 0.8;
+}
+
+.nav-top__input-search:active {
+  opacity: 0.5;
 }
 
 .nav-top__list {
@@ -229,6 +264,14 @@
   top: 0;
   left: 50%;
   margin-left: -14px;
+}
+
+.nav__link:hover {
+  opacity: 0.8;
+}
+
+.nav__link:active {
+  opacity: 0.5;
 }
 
 /* MAIN */
@@ -1293,6 +1336,14 @@
   cursor: pointer;
 }
 
+.icon-button:hover {
+  opacity: 0.8;
+}
+
+.icon-button:active {
+  opacity: 0.5;
+}
+
 /* FOOTER */
 .footer {
   background-color: #6725A8;
@@ -1359,7 +1410,15 @@
   fill: #CCCCCC;
 }
 
+.nav-mobile-bottom__icon:hover {
+  fill: #F0ECF4;
+}
+
 .nav-mobile-bottom__icon--active {
+  fill: #CB11AB;
+}
+
+.nav-mobile-bottom__icon--active:hover {
   fill: #CB11AB;
 }
 
