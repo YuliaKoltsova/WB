@@ -1,3 +1,4 @@
+
 /* Общие стили всей страницы */
 .visually-hidden {
   position: absolute;
@@ -35,7 +36,7 @@
 
   @media (min-width: 1024px) {
     width: 1024px;
-  }
+  } 
 
   @media (min-width: 1400px) {
     width: 1400px;
@@ -2064,6 +2065,7 @@ input[type="search"]::-webkit-search-results-decoration {
 .pop-over--delivery-total {
   left: 4px;
   top: 54px;
+
   @media (min-width: 1024px){
     left: -12px;
     top: 54px;

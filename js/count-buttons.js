@@ -67,7 +67,7 @@ const calculationCardPrices = (evt) => {
       count = Number(evt.target.parentElement.querySelector(".count__input").value);
       const allThumbnails = document.querySelectorAll(".delivery__product-thumbnail-container");
       for(let i = 0; i < allThumbnails.length; i++) {
-        if(evt.target.closest(".goods-stock__item").id === allThumbnails[i].id) { //Если id в карточке товара равно id в миниатюре товара, то
+        if(evt.target.closest(".goods-stock__item").id === allThumbnails[i].dataset.id) { //Если id в карточке товара равно id в миниатюре товара, то
           let countThumbnail = allThumbnails[i].querySelector(".delivery__product-thumbnail-count"); //Находим место в разметке в разделе "Доставка", где указывается количество товарая
           if (count < 2) { // Если количество товара <2, то скрываем элемент с количеством товара
             countThumbnail.style.display = "none";
