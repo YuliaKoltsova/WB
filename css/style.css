@@ -515,7 +515,7 @@ input[type="search"]::-webkit-search-results-decoration {
   }
 
   @media (min-width: 1400px) {
-    grid-template-columns: 106px 543px 100px 110px;
+    grid-template-columns: 106px 523px 100px 115px;
   }
 }
 
@@ -963,6 +963,10 @@ input[type="search"]::-webkit-search-results-decoration {
 
   @media(min-width: 1024px) {
     width: 638px;
+  }
+
+  @media(min-width: 1400px) {
+    width: 891px;
   }
 }
 
