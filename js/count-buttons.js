@@ -35,7 +35,6 @@ const calculatedTotalCount = (array, element) => {
   const arrayCounts = new Array(); 
   for (let i = 0; i < array.length; i++) {
     arrayCounts.push(Number(array[i].value.replace(/[^0-9]/g,"")));
-    console.log(arrayCounts);
   }
   // Забираем каждый второй элемент массива, т.к. в разметке дублируется блоки с количеством для mobile и desktop/tablet
   let sortedArrayCounts = new Array;
