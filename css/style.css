@@ -907,6 +907,7 @@ input[type="search"]::-webkit-search-results-decoration {
 .goods__text-container {
   display: flex;
   letter-spacing: -0.3px;
+  align-self: start;
 }
 
 .goods__subtitle {
