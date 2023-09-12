@@ -313,6 +313,10 @@ input[type="search"]::-webkit-search-results-decoration {
   @media(min-width: 1024px) {
     padding-top: 19px;
     margin-bottom: 25px;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 36px; 
+    letter-spacing: -0.28px;
   }
 }
 
@@ -1347,10 +1351,14 @@ input[type="search"]::-webkit-search-results-decoration {
 .error-text {
   color: #F55123;
   position: absolute;
-  bottom: 0;
+  top: 42px;
   left: 0;
   font-size: 12px;
   line-height: 14px;
+}
+
+.error-text-bottom {
+  top: 63px;
 }
 
 /* Итого */
@@ -1545,6 +1553,12 @@ input[type="search"]::-webkit-search-results-decoration {
     flex-direction: row-reverse;
     justify-content: start;
     column-gap: 16px;
+  }
+
+  @media (min-width: 1400px) {
+    flex-direction: row;
+    justify-content: space-between;
+    column-gap: 0;
   }
 }
 

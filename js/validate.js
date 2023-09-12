@@ -21,6 +21,9 @@ const createError = (input, text) => { //функция создания span'a 
   const parent = input.parentNode;
   const errorText = document.createElement("span");
   errorText.classList.add("error-text");
+  if (input.id == "taxpayer-number") {
+    errorText.classList.add("error-text-bottom");
+  }
   errorText.textContent = text;
   parent.classList.add("error");
   parent.append(errorText);
