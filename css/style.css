@@ -2090,8 +2090,7 @@ input[type="search"]::-webkit-search-results-decoration {
   right: -9px;
 
   @media (min-width: 1024px) {
-    bottom: 16px;
-    right: -6px;
+    bottom: 75px;
   }
 }
 
